@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <title>Julie Young</title>
+    <style type="text/css">
+    #title {
+        /*position: absolute;
+        z-index: 2;*/
+        font-family: 'Concert One', cursive;
+        font-size:75px;
+        color: #ffe680;
+        height: 20px;
+        text-align: center;
+        line-height:20px;
+        transition: ease-in-out .2s;
+    }
+
+    #title:hover {
+
+        color: black;
+        transition: ease-in-out .2s;
+
+    }
+    #menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    body {
+        margin: 0px;
+    }
+
+    td {
+        border: 1px white;
+    }
+
+
+    .row1 {
+        position: relative;
+        width: 25%;
+        font-family: 'Concert One'/*, cursive*/;
+        font-size: 45px;
+        height: 60px;
+
+        background-color: #98b2e6;
+        transition: ease-in-out .2s;
+    }
+
+    .row1:hover {
+        background-color: #7094db/*#5b84d7*/;
+        transition: ease-in-out .2s;
+    }
+
+
+    a{
+    	text-decoration: none;
+    	color:white;
+    }
+
+   
+   #box {
+        margin: auto;
+        width: 99.3%;
+        height: 515px;
+        border: 3px solid #98b2e6;
+        font-family: 'Concert One';
+        text-align: center;
+        color: #98b2e6;
+        line-height:500px;
+
+    }
+
+   /* #firstrow{
+        width: 100%;
+    }*/
+
+
+    .logo {
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        background-image:url(jlogo.png);
+        background-size:contain;
+        opacity: 80%;
+       /*background-color:lightblue;*/
+
+    }
+
+    .centerLogo {
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        /*background-image:url(jlogo.png);*/
+        background-color: grey;
+        background-size:contain;
+        opacity: 80%;
+        transition: 1s;
+    }
+
+    </style>
+</head>
+
+<body>
+    <a href="index.html"><h1 id="title" style="color: #ffe680">JULIE YOUNG</h1></a>
+    <table id="menu">
+        <tr>
+            <td class="row1">
+                <a href="home.html"><div>HOME</div></a>
+            </td>
+            
+            <td class="row1">
+                <a href="projects.html"><div>PROJECTS</div></a>
+            </td>
+            <td class="row1">
+                <a href="about.html"><div>ABOUT ME</div></a>
+            </td>
+            <td class="row1">
+                <a href="journal.html"><div>JOURNAL</div></a>
+            </td>
+        
+        </tr>
+    </table>
+
+
+    <div id="box">*scroll down and click around in this box*
+                
+    </div> 
+    
+        
+
+    <script type="text/javascript">
+    var box = document.getElementById("box");
+
+    var counter = 0;
+
+
+    box.addEventListener("click",function makej(event)
+    
+        {
+            counter = counter + 1;
+var j = document.createElement("div");
+
+            if (counter >= 6) {
+                j.classList.add("centerLogo");
+
+                box.appendChild(j);
+                console.log("hi julie");
+                j.style.left = event.clientX - 70+ "px";
+            j.style.top = event.clientY + 45 + "px";
+                // j.style.left = "200px";
+                // j.style.top = "200px";
+
+            }
+            
+
+            else if (counter < 6) {
+            box.appendChild(j);
+            j.classList.add("logo");
+            j.style.left = event.clientX - 70+ "px";
+            j.style.top = event.clientY + 45 + "px";
+
+            }
+
+            //This is the part that makes a div and is the first part of the if statement//
+
+
+
+        
+
+        });           
+
+                
+
+    </script> 
+    
+</body>
+
+</html>
