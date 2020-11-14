@@ -4,7 +4,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
 	<title>Julie Young</title>
 	<style type="text/css">
-		
+	
+    #subtitle {
+        font-family: 'Concert One', cursive;
+        font-size:35px;
+        padding:15px;
+        color: #98b2e6;
+    }	
 	#title {
  		/*position: absolute;
         z-index: 2;*/
@@ -52,27 +58,26 @@
     }
 
 
-   /* #subtitle {
+    #subtitle {
     	font-family: 'Concert One';
         font-size: 30px;
         height: 40px;
         padding: 1px;
         color: #7094db;
         margin: 20px;
-    }*/
+    }
 
-    .menu_cells {
+    .menu_row {
         font-family: 'Concert One';
         font-size: 30px;
         height: 300px;
-        width: 50%;
+        width: 100%;
         table-layout: fixed;
-        padding: 20px;
+        padding: 10px;
         color: white;
         background-color: #98b2e6;
-        margin: 20px;
+        margin: 10px;
         text-align: center;
-        border: 10px solid white;
     }
 
     body {
@@ -83,12 +88,57 @@
         border: 20px white;
     }
 
-    #project_menu {
-        /*border-collapse: separate;
-        border-spacing: 0 10px white;*/
-        width: 100%;
+    #menu_row {
+        width: 50%;
         position: relative;
-        padding: 20px;
+    }
+
+    .subtitle {
+        font-family: 'Concert One';
+        font-size: 30px;
+        margin: 10px;
+        height: 21px;
+        padding: 1px;
+        color: #98b2e6;
+    }
+
+    .descriptions {
+        font-family: 'Concert One';
+        font-size: 16px;
+        margin: 10px;
+        height: 12px;
+        padding: 3px;
+        color: grey;
+    }
+
+    .codesketches {
+        font-family: 'Concert One';
+        font-size: 20px;
+        margin: 10px;
+        padding: 3px;
+        color: #98b2e6;
+        line-height:24px;
+        transition:.2s;
+
+    }
+
+    #codesketch1:hover {
+        height: 24px;
+        width: 305px;
+        border:2px solid lightgrey;
+        transition:.2s;
+
+    }
+
+    #codesketch2:hover {
+        height: 24px;
+        width: 268px;
+        border:2px solid lightgrey;
+        transition:.2s;
+    }
+
+    .codesketchBoxes {
+        width: 50%;
     }
 
 	</style>
@@ -114,22 +164,29 @@
         
         </tr>
     </table>
-    <!-- <h2 id=subtitle></h2> -->
 
+    <h2 id=subtitle>CODESKETCHES:</h2>
 
-    <table id="project_menu">
+    <table id=codesketchTable>
         <tr>
-            <td class="menu_cells">
-                <a href="codesketches.html"><div>CODESKETCHES</div></a>
+            <td class="codesketchBoxes">
+                <a href="codesketch1.html"> <h3 class=codesketches id=codesketch1>Codesketch 1: Sun to Moon Square</h3></a>
+                <p class=descriptions>This is my first codesketch! I used the rotate transformation when you hover over the square, background-images and colors to create this.</p>
             </td>
+            <td class="codesketchBoxes"> 
+                <a href="arrays.html"><h4 class=codesketches id=codesketch2>Codesketch 2: Animal Pairings</h4></a>
+                <p class=descriptions>This codesketch uses an array! When the box is clicked, it retrieves the information as listed in the array, given the number generated from your click! Starting this codesketch, I already had a couple of animals that came to mind, which I ended up drawing for this!</p>
+            </td>
+        </tr>
+        
+    </table>
+    
 
 
-            <td class="menu_cells">
-                <a href="drawings.html"><div>DRAWINGS/IMAGES</a>
-            </td>
-<!-- <div class="project_titles" id=codesketch_title>CODESKETCHES</div>
-<div class="project_titles" id=images_used_in_codesketch>IMAGES/DRAWINGS</div>
-<div class="project_titles" id=other_projects>OTHER</div> -->
+
+
+
+
 
 
 </body>
