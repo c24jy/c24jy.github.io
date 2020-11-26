@@ -9,27 +9,6 @@
 	
 	<style type="text/css">
 
-	#title {
-		font-family: 'Concert One';
-		font-size: 50px;
-		z-index: 1;
-		position: absolute;
-		text-align: center;
-		bottom: 80%;
-		left: 30%;
-		color: #660000;
-	}
-
-	#subtitle {
-		font-family: 'Concert One';
-		font-size: 20px;
-		bottom: 75%;
-		left: 23%;
-		z-index: 1;
-		position: absolute;
-		color: #b35900;
-	}
-
 
 
 	a {
@@ -105,29 +84,53 @@
 
 	/*dropdown menu style end*/
 
+
+	#title {
+		display: flex;
+		font-family: 'Concert One';
+		font-size: 50px;
+		z-index: 1;
+		position: relative;
+		text-align: center;
+		justify-content: center;
+		line-height: 0px;
+		/*bottom: 80%;
+		left: 30%;*/
+		color: #660000;
+	}
+
+	#subtitle {
+		display: flex;
+		font-family: 'Concert One';
+		font-size: 20px;
+		z-index: 1;
+		position: relative;
+		justify-content: center;
+		color: #b35900;
+	}
+
 	#bubblestable{ /*table with family and friends*/
-		margin: 120px;
+		padding-top: 50px;
 		margin-left: auto;
 		margin-right: auto;
-		width: 75%;
+
+		/*width: 75%;*/
 	}
 
 	.maincircles{ /*div shape of family and friends*/
 		background-color: #ffc34d;
 		display: block;
 		margin: auto;
-		height: 225px;
+		height: 200px;
 		width: 300px;
 		text-align:center;
 		line-height: 205px;
 		font-size: 45px;
 		color: #4d2600;
-		/*padding: 20px 20px;*/
-		/*vertical-align:middle;*/
-		border-radius:25%;
+		border-radius:30%;
 		background-origin:content-box!important;
+		border: solid white 20px;
 		transition: ease-in-out .2s;
-		/*border-spacing: 0 20px;*/
 	}
 	.maincircles:hover{ /*div shape of family and friends hover*/
 		background-color: #ff9900;
@@ -147,10 +150,10 @@
 		width:50%;
 	}
 
-		.main button.active{
-			/*text-decoration: underline #4d2600 5px;*/
-			background-color: #ff9900;
-		}
+	.ffcells button.active{
+		text-decoration: underline #4d2600 5px;
+		/*background-color: #ff9900;*/
+	}
 		
 		.famnames {
 			background-color: #ffc34d;
@@ -163,7 +166,7 @@
 			color: #4d2600;
 			border-radius:50%;
 			line-height: 120px;
-			background-origin:content-box!important;
+			/*background-origin:content-box!important;*/
 		}
 
 		.famnames:hover {
@@ -206,9 +209,6 @@
 	</style>
 </head>
 <body>
-	<h1 id="title">Thanksgiving Jams</h1>
-	<p1 id="subtitle" style="text-align=center">*these songs are listened to around fall/thanksgiving by my family 
-		<br> and friends, click and select a name and enjoy the music!*</p1>
 
 	<!-- drop down menu -->
 	<div class="navbar">
@@ -224,6 +224,11 @@
     	</div>
   		</div> 
 	</div>
+
+	<h1 id="title">Thanksgiving Jams</h1>
+	<p1 id="subtitle" style="text-align=center">*these songs are listened to around fall/thanksgiving by my family 
+		<br> and friends, click and select a name and enjoy the music!*</p1>
+
 	<!-- drop down menu -->
 
 	<table id='bubblestable'>
