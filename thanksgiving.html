@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title></title>
+	
+	<style type="text/css">
+
+	#title {
+		font-family: 'Concert One';
+		font-size: 50px;
+		z-index: 1;
+		position: absolute;
+		text-align: center;
+		bottom: 80%;
+		left: 30%;
+		color: #660000;
+	}
+
+	#subtitle {
+		font-family: 'Concert One';
+		font-size: 20px;
+		bottom: 75%;
+		left: 23%;
+		z-index: 1;
+		position: absolute;
+		color: #b35900;
+	}
+
+
+
+	a {
+		text-decoration: none;
+	}
+
+
+	/*drop down menu style start*/
+	body {
+  			font-family:'Concert One', cursive;
+		}
+
+		.navbar {
+  			overflow: hidden;
+ 			background-color: none;
+		}
+
+		.navbar a {
+  			float:left;
+  			font-size: 20px;
+  			color: #ddd;
+  			text-align: center;
+  			padding: 14px 10px;
+  			text-decoration: none;
+		}
+
+		.dropdown {
+  			float:left;
+  			overflow: hidden;
+		}
+
+		.dropdown .dropbtn {
+  			font-size: 25px;  
+  			border: none;
+  			outline: none;
+  			color: #e68a00;
+  			padding: 14px 16px;
+  			background-color: inherit;
+  			font-family: 'Concert One', cursive;
+  			margin: 0px;
+		}
+
+		.navbar a:hover, .dropdown:hover .dropbtn {
+  			border: #ddd;
+		}
+
+		.dropdown-content {
+  			display: none;
+  			position: absolute;
+  			background-color: #ddd;
+  			min-width: 160px;
+  			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  			z-index: 1;
+		}
+
+		.dropdown-content a {
+  			float: none;
+  			color: white;
+ 			padding: 10px 14px;
+  			text-decoration: none;
+  			display: block;
+  			text-align: left;
+		}
+
+		.dropdown-content a:hover {
+  			background-color: lightgrey;
+  			text-decoration:underline;
+		}
+
+		.dropdown:hover .dropdown-content {
+  			display: block;
+		}
+
+	/*dropdown menu style end*/
+
+	#bubblestable{ /*table with family and friends*/
+		margin: 120px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 75%;
+	}
+
+	.maincircles{ /*div shape of family and friends*/
+		background-color: #ffc34d;
+		display: block;
+		margin: auto;
+		height: 225px;
+		width: 300px;
+		text-align:center;
+		line-height: 205px;
+		font-size: 45px;
+		color: #4d2600;
+		/*padding: 20px 20px;*/
+		/*vertical-align:middle;*/
+		border-radius:25%;
+		background-origin:content-box!important;
+		transition: ease-in-out .2s;
+		/*border-spacing: 0 20px;*/
+	}
+	.maincircles:hover{ /*div shape of family and friends hover*/
+		background-color: #ff9900;
+		transition: ease-in-out .2s;
+	}
+
+	.main { /*button on family and friends*/
+		background-color: inherit;
+		border: none;
+		outline: none;
+		font-family: 'Concert One';
+		cursor: pointer;
+		font-size: 55px;
+		color: #4d2600;
+		}
+
+		.main button.active{
+			/*text-decoration: underline #4d2600 5px;*/
+			background-color: #ff9900;
+		}
+		
+		.famnames {
+			background-color: #ffc34d;
+			display: block;
+			margin: auto;
+			height: 125px;
+			width: 125px;
+			text-align:center;
+			font-size: 30px;
+			color: #4d2600;
+			border-radius:50%;
+			line-height: 120px;
+			background-origin:content-box!important;
+		}
+
+		.famnames:hover {
+			height:115px;
+			width:115px;
+			border: solid #ff9900 5px;
+			line-height: 110px;
+			/*text-decoration: underline overline #ff9900 3px;*/
+
+		}
+
+		#namebubblestable{
+			width: 100%;
+		}
+
+		.tabcontent {
+			display: none;
+		}
+
+	/*songs*/
+	#dad {
+
+	}
+	#mom {
+
+	}
+	#remy {
+
+	}
+	#katie:hover {
+
+	}
+	#jasmine{
+
+	}
+	#julie{
+
+	}
+
+	</style>
+</head>
+<body>
+	<h1 id="title">Thanksgiving Jams</h1>
+	<p1 id="subtitle" style="text-align=center">*these songs are listened to around fall/thanksgiving by my family 
+		<br> and friends, click and select a name and enjoy the music!*</p1>
+
+	<!-- drop down menu -->
+	<div class="navbar">
+  		<div class="dropdown">
+    		<button class="dropbtn">MENU<i class="fa fa-caret-down" style="font-size:25px; color:#e68a00"></i>
+   	 		</button>
+    
+    	<div class="dropdown-content">
+      		<a href="home.html">HOME</a>
+      		<a href="projects.html">PROJECTS</a>
+      		<a href="about.html">ABOUT ME</a>
+      		<a href="journal.html">JOURNAL</a>
+    	</div>
+  		</div> 
+	</div>
+	<!-- drop down menu -->
+
+	<table id='bubblestable'>
+		<tr>
+			<td>
+				<button class ="main" onclick="openSubTabs(event,'family')">
+					<div class="maincircles">FAMILY</div>
+				</button>
+			</td>
+			<td>
+				<button class="main" onclick="openSubTabs(event,'friends')">
+					<div class="maincircles">FRIENDS</div>
+				</button>
+			</td>
+		</tr>	
+	</table>
+	<!-- tab content -->
+	<div id="family" class="tabcontent">
+		<table id='namebubblestable'>
+		<tr>
+			<td>
+				<div id="dad" class="famnames">DAD</div>
+			</td>
+			<td>
+				<div id="mom" class="famnames">MOM</div>
+			</td>
+			<td>
+				<div id="remy" class="famnames">REMY</div>
+			</td>
+			<td>
+				<div id="katie" class="famnames">KATIE</div>
+			</td>
+			<td>
+				<div id="jasmine" class="famnames">JASMINE</div>
+			</td>
+			<td>
+				<div id="julie" class="famnames">JULIE</div>
+			</td>
+		</tr>	
+	</table>
+	</div>
+
+	<div id="friends" class="tabcontent">
+	</div>
+
+	<script type="text/javascript">
+	
+	function openSubTabs(evt, name) {
+  // Declare all variables
+  var i, tabcontent, main;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  main = document.getElementsByClassName("main");
+  for (i = 0; i < main.length; i++) {
+    main[i].className = main[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(name).style.display = "block";
+  evt.currentTarget.className += " active";
+}	
+
+	</script>
+
+
+</body>
+</html>
