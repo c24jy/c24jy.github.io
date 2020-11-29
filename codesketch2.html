@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		
+		#square {
+			position: absolute;
+			z-index: 1;
+			width: 150px;
+			height: 150px;
+			background-color: purple;
+			opacity: 30%;
+			margin: 5px;
+			transition: 2s;
+		}
+
+		#title {
+			font-family: 'PT Sans', sans-serif;
+			font-size: 50px;
+			color: black;
+			text-align: center;
+			margin: 10px;
+
+		}
+
+		#instruct {
+			font-family: 'PT Sans', sans-serif;
+			font-size: 20px;
+			color: black;
+			text-align: center;
+		}
+
+
+
+	</style>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var counter = 0;
+		var numberSquares = window.prompt("How many squares do you want to use in your design? ");
+		// var sideLength = window.prompt("How long do you want the side length to be? (I would recommend anywhere between 50 - 500!)")
+		
+
+	
+
+    // document.addEventListener("click",function makej(event)
+    
+    //     {
+    //         var j = document.createElement("div");
+    //         j.id="j"
+    //         j.classList.add("square");
+    //         j.style.left = event.clientX + "px";
+    //         j.style.top = event.clientY + "px";
+    //         console.log("make square")
+
+    //     });      
+
+
+
+
+
+		document.addEventListener(
+			"click",
+			function () {
+				counter = counter + 1;
+				console.log(counter);
+				var j = document.createElement('div')
+				j.id='square';
+				j.classList.add("square")
+				j.style.left = event.clientX - 75 + "px";
+				j.style.top = event.clientY - 75 + "px";
+				
+				if (counter <= numberSquares) {
+					document.body.appendChild(j);
+				}
+				
+				// else if (counter = 10) {
+				// 	document.getElementById("square").style.trasform = "rotate(90deg)"
+				// }
+
+				// else if (counter == numberSquares + 1) {
+				// 	console.log("stop!");
+				// 	document.getElementById("square").style.trasform = "rotate(90deg)"
+				// }
+
+				else if (counter > numberSquares) {
+					console.log("stop!");
+				}
+			}
+
+			)
+	</script>
+	<h1 id=title>Square Art</h1>
+	<p id=instruct>*click to place a square*</p>
+</body>
+</html>

@@ -61,12 +61,45 @@
         margin: 20px;
     }
 
+    #homemenu{
+        width: 100%;
+    }
+
+    #row1{
+        width: 100%;
+        height: 200px;
+    }
+
+    #row2{
+        width: 100%;
+        height: 200px;
+    }
+
+    #welcome {
+        width: 50%;
+        background-color: lavender;
+    }
+
+    #projects {
+        width: 50%;
+        background-color: lightgrey;
+    }
+
+    #about {
+        width: 50%;
+        background-color: lightgreen;
+    }
+
+    #journal {
+        background-color: lightblue;
+    }
+
 	</style>
 </head>
 <body>
 
 	<a href="index.html"><h1 id="title" style="color: #ffe680">JULIE YOUNG</h1></a>
-    <table id="menu">
+    <!-- <table id="menu">
         <tr>
             <td class="row1">
                 <a href="home.html"><div style="color: #ffe680">HOME</div></a>
@@ -83,7 +116,36 @@
             </td>
         
         </tr>
-    </table>
+    </table> -->
+
+<table id="homemenu">
+    <tr id=row1>
+        <td>
+            <a href="index.html">
+                <div id="welcome"></div>
+            </a>
+        </td>
+        <td>
+            <a href="projects.html">
+                <div id="projects"></div>
+            </a>
+        </td>
+    </tr>
+    <tr id=row2>
+        <td>
+            <a href="about.html">
+                <div id="about"></div>
+            </a>     
+        </td>
+        <td>
+            <a href="journal.html">
+                <div id="journal"></div>
+            </a>
+        </td>
+    </tr>
+    <tr></tr>
+</table>
+
     <h2 id=subtitle></h2>
 
 </body>
