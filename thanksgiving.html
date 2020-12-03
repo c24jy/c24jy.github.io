@@ -230,11 +230,11 @@
   		</div> 
 	</div>
 
-	<h1 id="title">Thanksgiving Jams</h1>
-	<p1 id="subtitle" style="text-align=center">*these songs are listened to around fall/thanksgiving by my family 
-		<br> and friends, click and select a name and enjoy the music!*</p1>
-
 	<!-- drop down menu -->
+	<h1 id="title">Fall Jams</h1>
+	<p1 id="subtitle" style="text-align=center">*these songs are listened to around fall/thanksgiving by my family 
+		<br> and friends, click and hover over a name to enjoy the music!*</p1>
+
 
 	<table id='bubblestable'>
 		<tr>
@@ -279,6 +279,13 @@
 	<div id="friends" class="tabcontent"> Coming Soon!
 	</div>
 
+	<audio id="ways" src="ways.mp3"></audio>
+	<audio id="glad" src="glad.mp3"></audio>
+	<audio id="lights" src="lights.mp3"></audio>
+	<audio id="one" src="one.mp3"></audio>
+	<audio id="like" src="like.mp3"></audio>
+	<audio id="love" src="love.mp3"></audio>
+
 	<script type="text/javascript">
 	
 	function openSubTabs(evt, name) {
@@ -300,7 +307,104 @@
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(name).style.display = "block";
   evt.currentTarget.className += " active";
-}	
+};	
+
+// dad
+var dad = document.getElementById("dad");
+var ways = document.getElementById("ways");
+
+dad.addEventListener("mouseenter", function(){
+	ways.play();
+	// console.log("waysplay");
+
+});
+
+dad.addEventListener("mouseout", function(){
+	ways.pause();
+	// console.log("wayspause");
+
+});
+
+// mom
+var mom = document.getElementById("mom");
+var glad = document.getElementById("glad");
+
+mom.addEventListener("mouseenter", function(){
+	glad.play();
+	// console.log("waysplay");
+
+});
+
+mom.addEventListener("mouseout", function(){
+	glad.pause();
+	// console.log("wayspause");
+
+});
+// remy
+var remy = document.getElementById("remy");
+var lights = document.getElementById("lights");
+
+remy.addEventListener("mouseenter", function(){
+	lights.play();
+	// console.log("waysplay");
+
+});
+
+remy.addEventListener("mouseout", function(){
+	lights.pause();
+	// console.log("wayspause");
+
+});
+
+// katie
+var katie = document.getElementById("katie");
+var one = document.getElementById("one");
+
+katie.addEventListener("mouseenter", function(){
+	one.play();
+	// console.log("waysplay");
+
+});
+
+katie.addEventListener("mouseout", function(){
+	one.pause();
+	// console.log("wayspause");
+
+});
+
+//jasmine
+var jasmine = document.getElementById("jasmine");
+var like = document.getElementById("like");
+
+jasmine.addEventListener("mouseenter", function(){
+	like.play();
+	// console.log("waysplay");
+
+});
+
+jasmine.addEventListener("mouseout", function(){
+	like.pause();
+	// console.log("wayspause");
+
+});
+
+// julie
+var julie = document.getElementById("julie");
+var love = document.getElementById("love");
+
+julie.addEventListener("mouseenter", function(){
+	love.play();
+	// console.log("waysplay");
+
+});
+
+julie.addEventListener("mouseout", function(){
+	love.pause();
+	// console.log("wayspause");
+
+});
+
+
 
 	</script>
 
