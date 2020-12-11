@@ -147,8 +147,8 @@
 
 	/*	border: 3px solid lightgrey;*/
 		
-		width: 400px;
-		height: 200px;
+		width: 500px;
+		height: 300px;
 		/*background-color:lightgrey;*/
 		border-radius: 5%;
 		/*display:inline-block;*/
@@ -188,8 +188,8 @@
 
 	<h1 id="title">Holiday Songs</h1>
 
-	<p1 id="subtitle" style="text-align=center">*everytime you hit the snowman it will play a random 
-		<br> holiday song. hit the song title to pause. enjoy!*</p1> 
+	<p1 id="subtitle" style="text-align=center">*everytime you hit the snowman it will play a random
+		<br> holiday song-hit the song title below it to pause. enjoy!*</p1> 
 
 
 	<div id="main"></div>
@@ -201,6 +201,7 @@
 	<audio id="beginning" src="beginning.mp3"></audio>
 	<audio id="chestnuts" src="chestnuts.mp3"></audio>
 	<audio id="winter" src="winter.mp3"></audio>
+	<audio id="feel" src="feel.mp3"></audio>
 
 
 
@@ -211,16 +212,23 @@
 	var likeItsChristmas = document.getElementById('likeItsChristmas');
 	var beginning = document.getElementById('beginning');
 	var chestnuts = document.getElementById('chestnuts');
-	var winter = document.getElementById('winter')
+	var winter = document.getElementById('winter');
+	var feel = document.getElementById('feel');
 
 	// arrays
-	var songs = [document.getElementById('likeItsChristmas'), document.getElementById('beginning'), document.getElementById('chestnuts'), document.getElementById('winter')];
-	var descriptions = ["Like Its Christmas by the Jonas Brothers", "Its Beginning to Look a Lot Like Christmas by Michael Buble", "Chestnuts Roasting On an Open Fire by Nat King Cole", "Pitch Perfect 2: Winter Wonderland/Here Comes Santa Claus sung by Snoop Dog and Anna Kendrick"] 
+	var songs = [
+		document.getElementById('likeItsChristmas'), 
+		document.getElementById('beginning'), 
+		document.getElementById('chestnuts'), 
+		document.getElementById('winter'), 
+		document.getElementById('feel')
+		];
+	var descriptions = ["Like Its Christmas by the Jonas Brothers", "Its Beginning to Look a Lot Like Christmas by Michael Buble", "Chestnuts Roasting On an Open Fire by Nat King Cole", "Pitch Perfect 2: Winter Wonderland/Here Comes Santa Claus sung by Snoop Dog and Anna Kendrick", "You Make It Feel Like Christmas by Gwen Stafani and Blake Shelton"] 
 
 	main.addEventListener("click",
 		function() {
 			var number =
-				Math.round(Math.random()* 3);
+				Math.round(Math.random()* 4);
 			console.log(number);
 			console.log(songs[number]);
 			var randomSong = songs[number]
@@ -229,6 +237,7 @@
 			likeItsChristmas.pause();
 			chestnuts.pause();
 			winter.pause();
+			feel.pause();
 
 			randomSong.play();
 			description.innerText = descriptions[number];
@@ -240,6 +249,7 @@
 			likeItsChristmas.pause();
 			chestnuts.pause();
 			winter.pause();
+			feel.pause();
 		}
 	);
 </script>
