@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		
+		#snowflake{
+			width:200px;
+			height:200px;
+			background-color:grey;
+			/*background-image:url();*/
+			/*background-size: contain;
+			background-repeat: no-repeat;*/
+			/*background-position: center;*/
+			/*animation-name: dance;*/
+			animation-duration: 2s;
+			animation-iteration-count: 1;
+			/*transition: ;*/
+
+		}
+
+		@keyframes dance{
+			0%{transform:rotate(-90deg);} 
+			/*at 0 percent through the duration make something happen*/
+			50%{transform:rotate(90deg);}
+			100%{transform:rotate(-90deg);}
+		}
+	</style>
+</head>
+<body>
+	<div id='snowflake'></div> 
+
+	<script type="text/javascript">
+		var snowflake = document.getElementById('snowflake');
+		
+		snowflake.addEventListener("mouseenter", 
+			function(){
+				snowflake.style.animationName="dance";
+
+				setTimeout(function(){
+					snowflake.style.animationName="";
+				}, 2000); 
+
+		});
+	</script>
+	
+
+</body>
+</html>
