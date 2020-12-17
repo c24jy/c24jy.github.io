@@ -65,12 +65,12 @@
         position: fixed; 
         margin: auto;
         width: 100%;
-        height: 400px;
+        height: 500px;
         border: 3px solid #98b2e6;
         font-family: 'Concert One';
         text-align: center;
         color: #98b2e6;
-        line-height:500px;
+        /*line-height:500px;*/
 
     }
 
@@ -86,8 +86,8 @@
         height: 150px;
         background-image:url(jlogo.png);
         background-size:contain;
-        opacity: 80%;
-       /*background-color:lightblue;*/
+        opacity: 85%;
+        transition: 2s;
 
     }
 
@@ -99,7 +99,7 @@
         background-image:url(jlogo.png);
         background-color: grey;
         background-size:contain;
-        opacity: 80%;
+        opacity: 85%;
         transition: 1s;
     }
 
@@ -139,18 +139,22 @@
 
     var counter = 0;
 
+    var array  = [];
 
-    box.addEventListener("click",function makej(event)
+
+    document.addEventListener("click",function makej(event)
     
         {
             counter = counter + 1;
-var j = document.createElement("div");
+            var j = document.createElement("div");
             
             if (counter < 6) {
-            box.appendChild(j);
-            j.classList.add("logo");
-            j.style.left = event.clientX - 75 + "px";
-            j.style.top = event.clientY - 75 + "px";
+                document.body.appendChild(j);
+                j.classList.add("logo");
+                j.style.left = event.clientX - 75 + "px";
+                j.style.top = event.clientY - 75 + "px";
+                array.push(j);
+                console.log(array);
 
             }
             
@@ -158,12 +162,12 @@ var j = document.createElement("div");
                 // j.classList.add("centerLogo");
 
                 console.log("past 5 clicks");
-                var array = Array.from(j);
+                
                 array.forEach(function(j){
-                    j.position = "absolute";
+                    // j.position = "absolute";
                     j.style.transition="2s";
-                    j.style.left = "0px";
-                    j.style.top = "0px";
+                    j.style.left = "45%";
+                    j.style.top = "60%";
                 })
                 
 
