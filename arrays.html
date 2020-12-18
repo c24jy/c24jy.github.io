@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+
+		body {
+  			font-family:'Concert One', cursive;
+		}
+
+		.navbar {
+  			overflow: hidden;
+ 			background-color: none;
+		}
+
+		.navbar a {
+  			float:left;
+  			font-size: 20px;
+  			color: #ddd;
+  			text-align: center;
+  			padding: 14px 10px;
+  			text-decoration: none;
+		}
+
+		.dropdown {
+  			float:left;
+  			overflow: hidden;
+		}
+
+		.dropdown .dropbtn {
+  			font-size: 25px;  
+  			border: none;
+  			outline: none;
+  			color: #98b2e6;
+  			padding: 14px 16px;
+  			background-color: inherit;
+  			font-family: 'Concert One', cursive;
+  			margin: 0px;
+		}
+
+		.navbar a:hover, .dropdown:hover .dropbtn {
+  			border: #ddd;
+		}
+
+		.dropdown-content {
+  			display: none;
+  			position: absolute;
+  			background-color: #ddd;
+  			min-width: 160px;
+  			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  			z-index: 1;
+		}
+
+		.dropdown-content a {
+  			float: none;
+  			color: white;
+ 			padding: 10px 14px;
+  			text-decoration: none;
+  			display: block;
+  			text-align: left;
+		}
+
+		.dropdown-content a:hover {
+  			background-color: lightgrey;
+  			text-decoration:underline;
+		}
+
+		.dropdown:hover .dropdown-content {
+  			display: block;
+		}
+
+		#box {
+			margin: auto;
+			padding: 20px;
+			width: 600px;
+			height: 300px;
+			font-size:20px;
+			border-radius: 25px;
+			background-color:lightgrey;
+		}
+
+		/*#box img{
+			background-image:contain;
+		}*/
+
+		#a_title {
+			margin-top:0px;
+			font-family: 'Concert One', cursive;
+        	font-size:50px;
+        	text-align: center;
+        	color:#98b2e6;
+        	line-height: 55px;
+        	/*text-shadow: 3px 0 lightgrey, 0 3px lightgrey, 3px 0 lightgrey, 0 3px lightgrey;*/
+        	text-shadow: 2px 0 black, 0 2px black, 2px 0 black, 0 2px black;
+        	
+		}
+
+		#instructions {
+			margin-top: 5px;
+			font-family: 'Concert One', cursive;
+        	font-size:20px;
+        	text-align: center;
+        	color:#98b2e6;
+		}
+
+		#descriptBox {
+			margin: auto;
+			margin-top:10px;
+			padding: 20px;
+			width: 600px;
+			height: 100px;
+			font-size:20px;
+			border-radius: 25px;
+			background-color:white;
+			border-style: solid;
+			border-color: lightgrey;
+		}
+
+
+	</style>
+</head>
+<body> <!-- PageTite -->
+
+	<!-- Drop down menu start -->
+	<div class="navbar">
+  	<div class="dropdown">
+    	<button class="dropbtn">MENU<i class="fa fa-caret-down" style="font-size:25px; color:#98b2e6"></i>
+   	 	</button>
+    
+    	<div class="dropdown-content">
+      		<a href="home.html">HOME</a>
+      		<a href="projects.html">PROJECTS</a>
+      		<a href="about.html">ABOUT ME</a>
+      		<a href="journal.html">JOURNAL</a>
+    	</div>
+  	</div> 
+	</div>
+
+	<h1 id = "a_title" >Animal Pairings</h1>
+	<h2 id = "instructions">*click in the box below*</h2>
+
+	<!-- Drop down menu end ^^ -->
+
+	<div id="box"></div>
+	<div id="descriptBox"></div>
+<script type="text/javascript">
+	var box = document.getElementById('box');
+
+	var images = ["url(octo.png)", "url(dino.png)", "url(snowman1.png)"];
+	var descriptions = ["Octo the Octopus", "Dino the Dinosaur", "Alfred"]
+
+
+	var borderColor = ["#e2f3ae", "#f1e3b6", "#afc0d4"]
+
+	box.addEventListener("click",
+		function() {
+			var number =
+				Math.round(Math.random()* 2);
+			console.log(number)
+
+			box.style.backgroundImage=images[number];
+			box.style.backgroundSize="contain";
+			box.style.backgroundRepeat="no-repeat";
+			box.style.backgroundPosition="center";
+			box.style.backgroundColor= borderColor[number]
+
+			box.innerText = descriptions[number];
+
+			descriptBox.style.borderColor = borderColor[number];
+		}
+	);
+</script>
+</body>
+</html>
