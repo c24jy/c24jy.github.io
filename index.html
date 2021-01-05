@@ -155,13 +155,14 @@
                 j.style.top = event.clientY - 75 + "px";
                 array.push(j);
                 console.log(array);
+                //This is the part that makes a div and is the first part of the if statement//
 
             }
             
-            else if (counter >= 6) {
+            else if (counter == 6) {
                 // j.classList.add("centerLogo");
 
-                console.log("past 5 clicks");
+                console.log("6th click");
                 
                 array.forEach(function(j){
                     // j.position = "absolute";
@@ -169,21 +170,18 @@
                     j.style.left = "45%";
                     j.style.top = "60%";
                 })
+
+            }
+
+            
+            else if (counter == 7) {
+
+                console.log("click 7");
                 
-
-            //     box.appendChild(j);
-            //     console.log("hi julie");
-            //     j.style.left = event.clientX - 70+ "px";
-            // j.style.top = event.clientY + 45 + "px";
-                // j.style.left = "200px";
-                // j.style.top = "200px";
-
             }
             
 
             
-
-            //This is the part that makes a div and is the first part of the if statement//
 
 
 
