@@ -4,7 +4,10 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet"> <!-- font-family: 'Londrina Outline', cursive; -->
     <title>Julie Young</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
     <style type="text/css">
     #title {
         /*position: absolute;
@@ -103,6 +106,17 @@
         transition: 1s;
     }
 
+    .circletext {
+        font-family: 'Londrina Outline', cursive;
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        background-color: #ffe780;
+        border-radius: 50%;
+        transition: 1s;
+    }
+
     </style>
 </head>
 
@@ -131,6 +145,8 @@
     <div id="box">*scroll down and click around in this box*
                 
     </div> 
+
+
     
         
 
@@ -147,6 +163,7 @@
         {
             counter = counter + 1;
             var j = document.createElement("div");
+            var w = document.createElement("w");
             
             if (counter < 6) {
                 document.body.appendChild(j);
@@ -177,6 +194,8 @@
             else if (counter == 7) {
 
                 console.log("click 7");
+                
+
                 
             }
             
