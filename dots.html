@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+	<title>Julie Young</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <style type="text/css">
+
+    .pinkCircle {
+    	position: absolute;
+    	opacity: 80%;
+    	width: 30px;
+    	height: 30px;
+    	z-index: 3;
+    	border-radius: 50%;
+    	background-color: #d9a693;
+    	transition: ease-in-out .2s;
+    }
+
+    .navyCircle {
+    	position: absolute;
+    	opacity: 70%;
+    	width: 30px;
+    	height: 30px;
+    	z-index: 3;
+    	border-radius: 50%;
+    	background-color: #414f55;
+    	transition: ease-in-out .2s;
+    }
+
+    .greenCircle {
+    	position: absolute;
+    	opacity: 75%;
+    	width: 30px;
+    	height: 30px;
+    	z-index: 3;
+    	border-radius: 50%;
+    	background-color: #bbbc75;
+    	transition: ease-in-out .2s;
+    }
+
+    #row {
+    	width: 100%;
+    }
+
+    .cell {
+    	width: 30%;
+    }
+
+    #title {
+    	font-family: 'Concert One', cursive;
+        font-size:50px;
+        color: grey;
+        height: 20px;
+        text-align: center;
+    }
+
+    </style>
+    
+  
+</head>
+<body>
+<h id="title">Dots Codesketch</h>
+
+<table>
+	<tr id="row">
+		<td id="one" class="cell"></td>
+		<td id="two" class="cell"></td>
+		<td id="three" class="cell"></td>
+	</tr>
+
+</table>
+
+<script type="text/javascript">
+
+
+
+function makePinkDot (id){
+	var x = Math.floor(Math.random() * 400);
+	var y = Math.floor(Math.random() * 1000);
+
+	var dot = document.createElement('div');
+	one.appendChild(dot);
+	dot.classList.add('pinkCircle');
+	dot.style.left = x + "px";
+	dot.style.top = y + 100 + "px";
+	dot.id = "dot"+ id;
+
+	dot.addEventListener("click", function (event)
+	{
+		var number = Math.round(Math.random()* 2);
+		dot.style.backgroundColor= colors[number];
+	});
+
+};
+
+function makeNavyDot (){
+	var x = Math.floor(Math.random() * 400) + 450;
+	var y = Math.floor(Math.random() * 1000);
+
+	var dot = document.createElement('div');
+	two.appendChild(dot);
+	dot.classList.add('navyCircle');
+	dot.style.left = x + "px";
+	dot.style.top = y + 100 + "px";
+
+	dot.addEventListener("click", function (event)
+	{
+		var number = Math.round(Math.random()* 2);
+		dot.style.backgroundColor= colors[number];
+	});
+
+};
+
+function makeGreenDot (){
+	var x = Math.floor(Math.random() * 400) + 900;
+	var y = Math.floor(Math.random() * 1000);
+
+	var dot = document.createElement('div');
+	three.appendChild(dot);
+	dot.classList.add('greenCircle');
+	dot.style.left = x + "px";
+	dot.style.top = y + 100 + "px";
+
+	dot.addEventListener("click", function (event)
+	{
+		var number = Math.round(Math.random()* 2);
+		dot.style.backgroundColor= colors[number];
+	});
+};
+
+
+
+var colors = ["#d9a693", "#414f55", "#bbbc75"];
+var elements = document.getElementsByClassName("pinkCircle");
+// var xArray = [];
+// var yArray = [];
+
+for (var p=0;p<80; p=p+1) {
+	makePinkDot(p)
+	
+};
+
+for (var n=0;n<80; n=n+1) {
+	makeNavyDot()
+
+};
+
+for (var g=0;g<80; g=g+1) {
+	makeGreenDot()
+};
+
+document.addEventListener("scroll",function scollHi(event) 
+	
+	{
+		console.log("hi");
+
+	});
+
+
+</script>
+</body>
+</html>
