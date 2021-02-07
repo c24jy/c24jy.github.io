@@ -3,6 +3,8 @@
 <head>
 	<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
 	<title>Julie Young</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="favicon.png"/>
 
     <style type="text/css">
@@ -48,20 +50,117 @@
     	width: 30%;
     }
 
-    #title {
+    h1 {
     	font-family: 'Concert One', cursive;
         font-size:50px;
         color: grey;
-        height: 20px;
+        line-height: 5px;
+        /*height: 20px;*/
         text-align: center;
+        /*margin-right: auto;
+        margin-left: auto;*/
     }
+
+    p {
+    	font-family: 'Concert One', cursive;
+    	font-size:20px;
+    	color: grey;
+    	text-align: center;
+    }
+
+    /*dropdown menu style start*/ 
+
+		body {
+  			font-family:'Concert One', cursive;
+		}
+
+		.navbar {
+  			overflow: hidden;
+ 			background-color: none;
+		}
+
+		.navbar a {
+  			float:left;
+  			font-size: 20px;
+  			color: #ddd;
+  			text-align: center;
+  			padding: 14px 10px;
+  			text-decoration: none;
+		}
+
+		.dropdown {
+  			float:left;
+  			overflow: hidden;
+		}
+
+		.dropdown .dropbtn {
+  			font-size: 25px;  
+  			border: none;
+  			outline: none;
+  			color: grey;
+  			padding: 14px 16px;
+  			background-color: inherit;
+  			font-family: 'Concert One', cursive;
+  			margin: 0px;
+		}
+
+		.navbar a:hover, .dropdown:hover .dropbtn {
+  			border: #ddd;
+		}
+
+		.dropdown-content {
+  			display: none;
+  			position: absolute;
+  			background-color: #ddd;
+  			min-width: 160px;
+  			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  			z-index: 1;
+		}
+
+		.dropdown-content a {
+  			float: none;
+  			color: white;
+ 			padding: 10px 14px;
+  			text-decoration: none;
+  			display: block;
+  			text-align: left;
+		}
+
+		.dropdown-content a:hover {
+  			background-color: lightgrey;
+  			text-decoration:underline;
+		}
+
+		.dropdown:hover .dropdown-content {
+  			display: block;
+		}
+
+		/*dropdown menu style end*/
 
     </style>
     
   
 </head>
 <body>
-<h id="title">Dots Codesketch</h>
+
+<!-- dropdown menu html start -->
+<div class="navbar">
+  	<div class="dropdown">
+    	<button class="dropbtn">MENU<i class="fa fa-caret-down" style="font-size:25px; color:grey"></i>
+   	 	</button>
+    
+    	<div class="dropdown-content">
+      		<a href="home.html">HOME</a>
+      		<a href="codesketches.html">PROJECTS</a>
+      		<a href="about.html">ABOUT ME</a>
+      		<a href="journal.html">JOURNAL</a>
+    	</div>
+  	</div> 
+</div>
+<!-- dropdown menu html end -->
+
+<h1>Dots Codesketch</h1>
+<p>Each time you refresh the page the dots will randomly rearrange themselves <br> (within the confines of the column for the color!) Try clicking on the dots!</p>
 
 <table>
 	<tr id="row">
@@ -78,7 +177,7 @@
 
 function makePinkDot (id){
 	var x = Math.floor(Math.random() * 400);
-	var y = Math.floor(Math.random() * 1000);
+	var y = Math.floor(Math.random() * 1000)+ 75;
 
 	var dot = document.createElement('div');
 	one.appendChild(dot);
@@ -97,7 +196,7 @@ function makePinkDot (id){
 
 function makeNavyDot (){
 	var x = Math.floor(Math.random() * 400) + 450;
-	var y = Math.floor(Math.random() * 1000);
+	var y = Math.floor(Math.random() * 1200) + 75;
 
 	var dot = document.createElement('div');
 	two.appendChild(dot);
@@ -115,7 +214,7 @@ function makeNavyDot (){
 
 function makeGreenDot (){
 	var x = Math.floor(Math.random() * 400) + 900;
-	var y = Math.floor(Math.random() * 1000);
+	var y = Math.floor(Math.random() * 1000)+ 75;
 
 	var dot = document.createElement('div');
 	three.appendChild(dot);

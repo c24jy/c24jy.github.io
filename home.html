@@ -77,9 +77,30 @@
     }
 
     #welcome {
-        width: 50%;
-        background-color: lavender;
+        width: 100%;
+        /*background-color: lavender;*/
+        height: 220px;
+        background-image:url(hand.png);
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: rotate(-5deg);
+        transition: .2s ease-in-out;
     }
+
+    #welcome:hover {
+        transform: rotate(40deg);
+        transition: .2s ease-in-out;
+    }
+
+    /*p{
+        color: black;
+        font-size: 20px;
+        font-family: 'Concert One', cursive;
+        text-align: center;
+        opacity: 50%;
+
+    }*/
 
     #projects {
         width: 50%;
@@ -100,30 +121,13 @@
 <body>
 
 	<a href="index.html"><h1 id="title" style="color: #ffe680">JULIE YOUNG</h1></a>
-    <!-- <table id="menu">
-        <tr>
-            <td class="row1">
-                <a href="home.html"><div style="color: #ffe680">HOME</div></a>
-            </td>
-            
-            <td class="row1">
-                <a href="projects.html"><div>PROJECTS</div></a>
-            </td>
-            <td class="row1">
-                <a href="about.html"><div>ABOUT ME</div></a>
-            </td>
-            <td class="row1" id=journal>
-                <a href="journal.html"><div>JOURNAL</div></a>
-            </td>
-        
-        </tr>
-    </table> -->
 
 <table id="homemenu">
     <tr id=row1>
         <td>
             <a href="index.html">
                 <div id="welcome"></div>
+                <!-- <p>WELCOME</p> -->
             </a>
         </td>
         <td>

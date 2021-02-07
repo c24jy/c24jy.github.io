@@ -17,7 +17,7 @@
    		}
 
       #s1 {
-        background-color:#F7EDE2;
+        /*background-color:#F7EDE2;*/
         opacity:80%;
         top:0%;
       }
@@ -25,11 +25,12 @@
       #welcome{
         width:500px;
         height:450px;
-        background-color: #DDBEA9;
+        background-color: #373E40;
         margin: auto;
         margin-top: 7%;
         font-family: 'Mukta', sans-serif;
         text-align: center;
+        /*position: fixed;*/
       }
 
       h1 {
@@ -37,27 +38,38 @@
         font-size:40px;
         padding-top: 75px;
         padding-bottom:20px;
+        color: white;
         font-family: 'Fredoka One', cursive;
       }
 
       p {
         /*line-height: 20px;*/
+        color: white;
         padding-left: 5px;
         padding-right: 5px;
         font-size:25px;
       }
 
       #s2 {
-        background-color: #f2f2f2;
-        opacity:20%;
+        /*background-color: #f2f2f2;
+        opacity:20%;*/
         top:100%;
-        /*position: fixed;*/
+        /*position: absolute;*/
       }
 
       #s3 {
         background-color:lightyellow;
         opacity:15%;
         top:200%;
+      }
+
+      .circle {
+        position: absolute;
+        opacity: 90%;
+        width: 30px;
+        height: 30px;
+        z-index: 3;
+        border-radius: 50%;
       }
    </style>
 </head>
@@ -74,5 +86,59 @@
 	<section id="s2"></section>
 	<section id="s3"></section>
 
+  <script type="text/javascript">
+
+  var dotColors = ["#FDD35D", "#C5D86D", "#B9CDDA", "#C6878F"];
+
+  var yellowArray = [];
+
+
+  var s2 = document.getElementById("s2");
+    function makeDots (id){
+      var number = Math.round(Math.random()*3);
+
+      var x = Math.floor(Math.random()*1250);
+      var y = Math.floor(Math.random()*1000);
+
+      var dot = document.createElement('div');
+      s2.appendChild(dot);
+      dot.classList.add('circle');
+      dot.style.left = x + "px";
+      dot.style.top = y + 100 + "px";
+      dot.style.backgroundColor = dotColors[number];
+      // console.log(dotColors[number]);
+      // console.log(x,y);
+
+      if (dot.style.backgroundColor == "#FDD35D") {
+        yellowArray.push(dot);
+      }
+
+      // else if (dot.style.backgroundColor == "#C5D86D") {
+      //   dot.id = "greenDot"+ id;
+      // }
+
+      // else if (dot.style.backgroundColor == "#B9CDDA") {
+      //   dot.id = "blueDot"+ id;
+      // }
+
+      // else if (dot.style.backgroundColor == "##C6878F") {
+      //   dot.id = "pinkDot"+ id;
+      // }
+
+      function changePosition() {
+        dot.style.left = x + 25 * Math.random() + "px";
+        dot.style.top = y + 25 * Math.random()  + "px";   
+      };
+
+      setInterval(changePosition, 200);
+    };
+
+for (var i=0;i<100; i=i+1) {
+  makeDots(i);
+  
+};
+
+
+  </script>
 </body>
 </html>
