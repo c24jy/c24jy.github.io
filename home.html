@@ -73,7 +73,17 @@
 
     #row2{
         width: 100%;
+        height: 50px;
+    }
+
+    #row3{
+        width: 100%;
         height: 200px;
+    }
+
+    #row4{
+        width: 100%;
+        height: 50px;
     }
 
     #welcome {
@@ -93,6 +103,13 @@
         transition: .2s ease-in-out;
     }
 
+    .text {
+        font-size:20px;
+        font-family: 'Concert One';
+        color:grey;
+        text-align: center;
+    }
+
     /*p{
         color: black;
         font-size: 20px;
@@ -108,8 +125,18 @@
     }
 
     #about {
-        width: 50%;
-        background-color: lightgreen;
+        width: 100%;
+        height: 200px;
+        background-image:url(lightQuestion.png);
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .2s ease-in-out;
+    }
+
+    #about:hover {
+        background-image:url(darkQuestion.png);
+        transition: .2s ease-in-out;
     }
 
     #journal {
@@ -138,6 +165,18 @@
     </tr>
     <tr id=row2>
         <td>
+            <a href="index.html">
+                <div class="text">welcome page</div>
+            </a>     
+        </td>
+        <td>
+            <a href="codesketches.html">
+                <div class="text">codesketches</div>
+            </a>
+        </td>
+    </tr>
+    <tr id="row3">
+        <td>
             <a href="about.html">
                 <div id="about"></div>
             </a>     
@@ -148,7 +187,18 @@
             </a>
         </td>
     </tr>
-    <tr></tr>
+    <tr id="row4">
+        <td>
+            <a href="about.html">
+                <div class="text">about me</div>
+            </a>     
+        </td>
+        <td>
+            <a href="journal.html">
+                <div class="text">journal entries</div>
+            </a>
+        </td>
+    </tr>
 </table>
 
     <h2 id=subtitle></h2>
