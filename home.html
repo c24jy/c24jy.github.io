@@ -121,7 +121,12 @@
 
     #projects {
         width: 50%;
-        background-color: lightgrey;
+        height: 200px;
+        background-image:url(.png);
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .2s ease-in-out;
     }
 
     #about {
@@ -140,7 +145,21 @@
     }
 
     #journal {
-        background-color: lightblue;
+        width: 100%;
+        height: 200px;
+        background-image:url(journalOutline.png);
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .2s ease-in-out;
+    }
+
+    #journal:hover {
+        background-image:url(journalFill.png);
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .2s ease-in-out;
     }
 
 	</style>
