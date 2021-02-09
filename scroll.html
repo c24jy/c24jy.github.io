@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style type="text/css">
+	#big {
+		width:100%;
+		height: 1000px;
+		background-color: #b9cdda;
+	}
+
+	#small {
+		width:300px;
+		height:300px;
+		border: 2px black solid;
+	}
+
+	.dots {
+		position: relative;
+		background-color:grey;
+        opacity: 50%;
+        width: 30px;
+        height: 30px;
+        z-index: 3;
+        border-radius: 50%;
+        display: inline-block;
+	}
+</style>
+</head>
+<body>
+
+<div id="big">
+	<div id="small"></div>
+	<div id="dot1" class="dots"></div>
+	<div class="dots"></div>
+	<div class="dots"></div>
+	<div class="dots"></div>
+	<div class="dots"></div>
+	<div class="dots"></div>
+	<div class="dots"></div>
+	<div class="dots"></div>
+</div>
+
+<script type="text/javascript">
+
+var dot1 = document.getElementById("dot1");
+
+var small = document.getElementById("small");
+
+	document.addEventListener("scroll", function(x) {
+		console.log(window.scrollY);
+
+		if (window.scrollY > 100) {
+			small.appendChild(dot1);
+		}
+	});
+
+
+
+</script>
+</body>
+</html>

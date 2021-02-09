@@ -117,6 +117,95 @@
         transition: 1s;
     }
 
+    .logo {
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        background-image:url(jlogo.png);
+        background-size:contain;
+        opacity: 85%;
+        transition: 2s;
+
+    }
+
+    .e {
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        background-image:url(e.png);
+        background-size:contain;
+        opacity: 85%;
+        transition: 2s;
+    }
+
+    .l {
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        background-image:url(l.png);
+        background-size:contain;
+        opacity: 85%;
+        transition: 2s;
+    }
+
+    .c {
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        background-image:url(c.png);
+        background-size:contain;
+        opacity: 85%;
+        transition: 2s;
+    }
+
+    .o {
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        background-image:url(o.png);
+        background-size:contain;
+        opacity: 85%;
+        transition: 2s;
+    }
+
+    .m {
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        background-image:url(m.png);
+        background-size:contain;
+        opacity: 85%;
+        transition: 2s;
+    }
+
+    .e2 {
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        background-image:url(e2.png);
+        background-size:contain;
+        opacity: 85%;
+        transition: 2s;
+    }
+
+    .mark {
+        position: absolute;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        background-image:url(mark.png);
+        background-size:contain;
+        opacity: 85%;
+        transition: 2s;
+    }
+
     </style>
 </head>
 
@@ -157,13 +246,21 @@
 
     var array  = [];
 
+    var e = document.createElement("eCircle");
+    var e2 = document.createElement("e2Circle");
+    var l = document.createElement("lCircle");
+    var c = document.createElement("cCircle");
+    var o = document.createElement("oCircle");
+    var m = document.createElement("mCircle");
+    var mark = document.createElement("markCircle");
+    
+
 
     document.addEventListener("click",function makej(event)
     
         {
             counter = counter + 1;
             var j = document.createElement("div");
-            var w = document.createElement("w");
             
             if (counter < 6) {
                 document.body.appendChild(j);
@@ -193,22 +290,110 @@
             
             else if (counter == 7) {
 
-                console.log("click 7");
-                
-
+                array.forEach(function(j){
+                    j.style.transition="2s";
+                    j.style.transform ="rotate(-70deg)";
+                })
                 
             }
-            
 
-            
+            else if (counter == 8) {
+                array.forEach(function(j){
+                    j.style.transition="2s";
+                    j.style.transform ="rotate(-0deg)";
+                    j.style.backgroundImage = "url('w.png')";
+                })      
+            }
 
+            else if (counter == 9) {
+                e.classList.add("e");
+                document.body.appendChild(e);
+                e.style.left = event.clientX - 75 + "px";
+                e.style.top = event.clientY - 75 + "px";   
+            }
 
+            else if (counter == 10) {
+                l.classList.add("l");
+                document.body.appendChild(l);
+                l.style.left = event.clientX - 75 + "px";
+                l.style.top = event.clientY - 75 + "px";   
+            }
 
-        
+            else if (counter == 11) {
+                c.classList.add("c");
+                document.body.appendChild(c);
+                c.style.left = event.clientX - 75 + "px";
+                c.style.top = event.clientY - 75 + "px";   
+            }
 
-        });           
+            else if (counter == 12) {
+                o.classList.add("o");
+                document.body.appendChild(o);
+                o.style.left = event.clientX - 75 + "px";
+                o.style.top = event.clientY - 75 + "px";   
+            }
 
-                
+            else if (counter == 13) {
+                m.classList.add("m");
+                document.body.appendChild(m);
+                m.style.left = event.clientX - 75 + "px";
+                m.style.top = event.clientY - 75 + "px";   
+            }
+
+            else if (counter == 14) {
+                e2.classList.add("e2");
+                document.body.appendChild(e2);
+                e2.style.left = event.clientX - 75 + "px";
+                e2.style.top = event.clientY - 75 + "px";   
+            }  
+
+            else if (counter == 15) {
+                mark.classList.add("mark");
+                document.body.appendChild(mark);
+                mark.style.left = event.clientX - 75 + "px";
+                mark.style.top = event.clientY - 75 + "px";
+            }
+
+            else if (counter == 16){      
+                array.forEach(function(j){
+                    j.style.transition="2s";
+                    j.style.left = "15%";
+                    j.style.top = "50%";
+                    j.style.opacity = "33%"
+                })
+
+                e.style.transition="2s";
+                e.style.left = "25%";
+                e.style.top = "50%";
+
+                l.style.transition="2s";
+                l.style.left = "35%";
+                l.style.top = "50%";
+
+                c.style.transition="2s";
+                c.style.left = "45%";
+                c.style.top = "50%";
+
+                o.style.transition="2s";
+                o.style.left = "55%";
+                o.style.top = "50%";
+
+                m.style.transition="2s";
+                m.style.left = "65%";
+                m.style.top = "50%";
+
+                e2.style.transition="2s";
+                e2.style.left = "75%";
+                e2.style.top = "50%";
+
+                mark.style.transition="2s";
+                mark.style.left = "85%";
+                mark.style.top = "50%";
+
+            }
+
+        }); 
+    // closing tag for click event listener                      
 
     </script> 
     
