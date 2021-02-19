@@ -58,8 +58,8 @@
       }
 
       #s3 {
-        background-color:lightyellow;
-        opacity:15%;
+        /*background-color:lightyellow;
+        opacity:20%;*/
         top:200%;
       }
 
@@ -70,6 +70,16 @@
         height: 30px;
         z-index: 3;
         border-radius: 50%;
+      }
+
+      #s3row {
+        width:100%;
+        height:500px;
+      }
+
+      .s3c {
+        width: 100%;
+        border: 2px black solid;
       }
    </style>
 </head>
@@ -84,7 +94,18 @@
   </section>
 
 	<section id="s2"></section>
-	<section id="s3"></section>
+	<section id="s3">
+    <table>
+      <tr id="s3row">
+        <td class="s3c" id="s31"></td>
+        <td class="s3c" id="s32"></td>
+        <td class="s3c" id="s33"></td>
+      </tr>
+    </table>
+
+
+  </section>
+
 
   <script type="text/javascript">
 
@@ -98,7 +119,7 @@
       var number = Math.round(Math.random()*3);
 
       var x = Math.floor(Math.random()*1250);
-      var y = Math.floor(Math.random()*1000);
+      var y = Math.floor(Math.random()*500);
 
       var dot = document.createElement('div');
       s2.appendChild(dot);
@@ -113,17 +134,6 @@
         yellowArray.push(dot);
       }
 
-      // else if (dot.style.backgroundColor == "#C5D86D") {
-      //   dot.id = "greenDot"+ id;
-      // }
-
-      // else if (dot.style.backgroundColor == "#B9CDDA") {
-      //   dot.id = "blueDot"+ id;
-      // }
-
-      // else if (dot.style.backgroundColor == "##C6878F") {
-      //   dot.id = "pinkDot"+ id;
-      // }
 
       function changePosition() {
         dot.style.left = x + 25 * Math.random() + "px";
@@ -133,10 +143,18 @@
       setInterval(changePosition, 200);
     };
 
-for (var i=0;i<100; i=i+1) {
-  makeDots(i);
+  for (var i=0;i<100; i=i+1) {
+    makeDots(i);
   
-};
+  };
+
+  // document.addEventListener("scroll", function(x) {
+  //   console.log(window.scrollY);
+
+  //   if (window.scrollY > 100) {
+  //     small.appendChild(dot1);
+  //   }
+  // });
 
 
   </script>
