@@ -22,15 +22,18 @@
         top:0%;
       }
 
-      #welcome{
+      .square{
         width:500px;
         height:450px;
         background-color: #373E40;
         margin: auto;
-        margin-top: 7%;
         font-family: 'Mukta', sans-serif;
         text-align: center;
         /*position: fixed;*/
+      }
+
+      #welcome{
+        margin-top: 7%;
       }
 
       h1 {
@@ -60,7 +63,28 @@
       #s3 {
         /*background-color:lightyellow;
         opacity:20%;*/
-        top:200%;
+        top:280%;
+      }
+      #s4 {
+        top:380%;
+        /*position: fixed;*/
+      }
+
+      #s5 {
+        position: absolute;
+        top:545%;
+        background-image: linear-gradient(rgba(2,5,15,0), rgba(2,5,15,1));
+      }
+
+      #s6 {
+        /*position: absolute;*/
+        top:645%;
+        background-color: rgb(2,5,15);
+      }
+
+      #s7 {
+        top:745%;
+        background-color: rgb(2,5,15);
       }
 
       .circle {
@@ -72,21 +96,114 @@
         border-radius: 50%;
       }
 
-      #s3row {
-        width:100%;
-        height:500px;
+      .s3c {
+        margin:4px;
+        width: 32%;
+        border: 2px black solid;
+        height: 90%;
+        display: inline-block;
       }
 
-      .s3c {
-        width: 100%;
-        border: 2px black solid;
+      .s3Title {
+        margin-top:100px;
+        /*margin:4px;*/
+        width: 32%;
+        /*border: 2px black solid;*/
+        height: 25%;
+        display: inline-block;
+        font-family: 'Mukta', sans-serif;
+        text-align: center;
+        font-size: 35px;
+
       }
+
+
+      .yellowT{
+        font-size: 35px;
+        font-family: 'Mukta', sans-serif;
+        text-decoration: underline wavy #FDD35D;
+        text-align: center;
+      }
+      #greenT{
+        text-decoration: underline wavy #C5D86D;
+      }
+      #blueT{
+        text-decoration: underline wavy #B9CDDA;
+      }
+
+      #introToMusic {
+        transition: ease-in-out .2s;
+        margin-top: 32%;
+        left:40%;
+        padding: 15px;
+        
+      }
+
+      #introToMusic p{
+        padding: 20% 0;
+        /*position: relative;*/
+      }
+
+      .dText {
+        color:black;
+        font-family: 'Mukta', sans-serif;
+        text-align: center;
+
+      }
+
+      .musicGlow {
+        height:30%;
+        width: 65%;
+        border-radius: 25px;
+        background-color:white;
+        margin-top:300px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 0px 15px 10px #FDD35D;
+        padding-top:40px;
+        /*text-align: center;*/
+      }
+
+      .yellowGlowTitle {
+        font-size: 35px;
+        font-family: 'Mukta', sans-serif;
+        text-decoration: underline wavy #FDD35D;
+        text-align: left;
+        padding-left: 100px;
+
+      }
+
+      .glowDes{
+        font-size: 25px;
+        font-family: 'Mukta', sans-serif;
+        color:black;
+        text-align: left;
+        padding-left: 100px;
+      }
+
+      .sCode {
+        background-repeat: no-repeat;
+        background-size: contain;
+        /*background-color: black;*/
+        width:275px;
+        height:150px;
+        top: -70%;
+        left: 55%;
+        position: relative;
+      }
+      
+      #whatCode {
+        background-image: url('whatTheHellCode.png');
+      }
+
+    
+
    </style>
 </head>
 <body>
 
 	<section id="s1">
-    <div id="welcome">
+    <div id="welcome" class="square">
       <h1>- Music Data Project -</h1>
       <p>This project utilizes my mood associations with songs. If you like to listen to certain songs when you are in certain moods that is exactly what this is!</p>
       <p>Keep Scrolling and Enjoy! :)</p>
@@ -95,31 +212,71 @@
 
 	<section id="s2"></section>
 	<section id="s3">
-    <table>
-      <tr id="s3row">
-        <td class="s3c" id="s31"></td>
-        <td class="s3c" id="s32"></td>
-        <td class="s3c" id="s33"></td>
-      </tr>
-    </table>
+    <div class="s3Title" >
+      <h class="yellowT">yellow:</h>
+      <p class="dText">Happy upbeat songs that are perfect to listen to when you are in the car and want to sing along!</p>
+    </div>
+    <div class="s3Title" >
+      <h id="greenT">green:</h>
+      <p class="dText">Calmer happy songs to listen to when doing homework or biking.</p>
+    </div>
+    <div class="s3Title" >
+      <h id="blueT">blue:</h>
+      <p class="dText">Calm and sad songs</p>
+    </div>
 
-
+    <div class="s3c" id="s31"></div>
+    <div class="s3c" id="s32"></div>
+    <div class="s3c" id="s33"></div>
   </section>
+  <section id="s4">
+    <div id="introToMusic" class="square">
+      <p>Click on this box then keep scrolling to listen to a few of my favorite songs from each catagory! 
+      <br>
+      <br>
+      *there will be a spotify code that you can scan in the spotify app to pull up the specific song!* </p>
+    </div>
+  </section>
+  <section id="s5"></section>
+  <section id="s6">
+    <div class="musicGlow">
+      <h class="yellowGlowTitle"> What the Hell </h>
+      <p class="glowDes">by Avril Lavigne</p>
+      <div class="sCode" id="whatCode"></div>
+    </div>
+  </section>
+  <section id="s7"></section>
+
+
+
+
+  <audio id="whatTheHell" src="whatTheHell.mp3"></audio>
+
+
+
 
 
   <script type="text/javascript">
 
+  var whatTheHell = document.getElementById('whatTheHell');
+
   var dotColors = ["#FDD35D", "#C5D86D", "#B9CDDA", "#C6878F"];
 
   var yellowArray = [];
+  var greenArray = [];
+  var blueArray = [];
+  var pinkArray = [];
 
+  introToMusic.addEventListener("click", function () {
+    introToMusic.style.backgroundColor = "#585a6e";
+  });
 
   var s2 = document.getElementById("s2");
     function makeDots (id){
       var number = Math.round(Math.random()*3);
 
       var x = Math.floor(Math.random()*1250);
-      var y = Math.floor(Math.random()*500);
+      var y = Math.floor(Math.random()*1050);
 
       var dot = document.createElement('div');
       s2.appendChild(dot);
@@ -131,8 +288,20 @@
       // console.log(x,y);
 
       if (dot.style.backgroundColor == "#FDD35D") {
-        yellowArray.push(dot);
+        yellowArray.push(this);
       }
+
+      // if (dot.style.backgroundColor == "#C5D86D") {
+      //   greenArray.push(dot);
+      // }
+
+      // if (dot.style.backgroundColor == "#B9CDDA") {
+      //   blueArray.push(dot);
+      // }
+
+      // if (dot.style.backgroundColor == "#C6878F") {
+      //   pinkArray.push(dot);
+      // }
 
 
       function changePosition() {
@@ -143,18 +312,36 @@
       setInterval(changePosition, 200);
     };
 
-  for (var i=0;i<100; i=i+1) {
+  for (var i=0;i<175; i=i+1) {
     makeDots(i);
   
   };
 
-  // document.addEventListener("scroll", function(x) {
-  //   console.log(window.scrollY);
+  var s31 = document.getElementById("s31");
+  var s32 = document.getElementById("s32");
+  var s33 = document.getElementById("s33");
 
-  //   if (window.scrollY > 100) {
-  //     small.appendChild(dot1);
-  //   }
+  document.addEventListener("scroll", function() {
+    console.log(window.scrollY);
+    if (window.scrollY >= 3600){
+      console.log("What the hell play!");
+      whatTheHell.play();
+    }
+  });
+
+  // document.addEventListener("scroll", function(moveYellow) {
+  //   console.log(window.scrollY);
+  //   console.log(yellowArray);
+
+  //   // if (window.scrollY == 775) {
+  //   //   yellowArray.forEach(moveYellow);
+
+
+  //   //   s31.appendChild(yellowArray);
+  //   // }
   // });
+
+  
 
 
   </script>
