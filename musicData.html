@@ -6,6 +6,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a8bc235660.js" crossorigin="anonymous"></script>
+
+
 	<title>Julie Young</title>
     <link rel="icon" type="image/png" href="favicon.png"/>
 
@@ -62,8 +66,7 @@
       }
 
       #s3 {
-        /*background-color:lightyellow;
-        opacity:20%;*/
+        z-index:-1;
         top:280%;
       }
       #s4 {
@@ -72,20 +75,69 @@
       }
 
       #s5 {
-        z-index: 5;
+        z-index: -1;
         position: absolute;
         top:545%;
         background-image: linear-gradient(rgba(2,5,15,0), rgba(2,5,15,1));
       }
 
       #s6 {
-        /*position: absolute;*/
+        z-index: -1;
         top:645%;
         background-color: rgb(2,5,15);
       }
 
       #s7 {
+        z-index: -1;
         top:745%;
+        background-color: rgb(2,5,15);
+      }
+
+      #s8 {
+        z-index: -1;
+        top:825%;
+        background-color: rgb(2,5,15);
+      }
+
+      #s9 {
+        z-index: -1;
+        top:925%;
+        background-color: rgb(2,5,15);
+      }
+
+      #s10 {
+        z-index: -1;
+        top:1000%;
+        background-color: rgb(2,5,15);
+      }
+
+      #s11 {
+        z-index: -1;
+        top:1100%;
+        background-color: rgb(2,5,15);
+      }
+
+      #s12 {
+        z-index: -1;
+        top:1175%;
+        background-color: rgb(2,5,15);
+      }
+
+      #s13 {
+        z-index: -1;
+        top:1275%;
+        background-color: rgb(2,5,15);
+      }
+
+      #s14 {
+        z-index: -1;
+        top:1350%;
+        background-color: rgb(2,5,15);
+      }
+
+      #s15 {
+        z-index: -1;
+        top:1450%;
         background-color: rgb(2,5,15);
       }
 
@@ -94,23 +146,23 @@
         opacity: 90%;
         width: 30px;
         height: 30px;
-        z-index: 3;
+        z-index: -3;
         border-radius: 50%;
       }
 
       .s3c {
-        /*margin:4px;*/
+        z-index:-1;
         width: 32%;
         border: 2px black solid;
-        height: 90%;
+        height: 50%;
         display: inline-block;
       }
 
       .s3Title {
+        z-index:-1;
         margin-top:100px;
         /*margin:4px;*/
         width: 32%;
-        /*border: 2px black solid;*/
         height: 25%;
         display: inline-block;
         font-family: 'Mukta', sans-serif;
@@ -121,31 +173,34 @@
 
 
       .yellowT{
+        z-index:-1;
         font-size: 35px;
         font-family: 'Mukta', sans-serif;
         text-decoration: underline wavy #FDD35D;
         text-align: center;
       }
       #greenT{
+        z-index:-1;
         text-decoration: underline wavy #C5D86D;
       }
       #blueT{
+        z-index:-1;
         text-decoration: underline wavy #B9CDDA;
       }
 
       #introToMusic {
         transition: ease-in-out .2s;
-        margin-top: 32%;
+        margin-top: 20%;
         /*top:300%;*/
         left:30%;
         padding: 15px;
-        z-index:0;
+        z-index:-3;
         position: absolute;
         
       }
 
       #introToMusic p{
-        padding: 20% 0;
+        padding: 10% 0;
         /*position: relative;*/
       }
 
@@ -176,7 +231,44 @@
         text-decoration: underline wavy #FDD35D;
         text-align: left;
         padding-left: 100px;
+      }
 
+      .greenGlowTitle {
+        font-size: 35px;
+        font-family: 'Mukta', sans-serif;
+        text-decoration: underline wavy #C5D86D;
+        text-align: left;
+        padding-left: 100px;
+      }
+      .greenMusicGlow {
+        height:30%;
+        width: 65%;
+        border-radius: 25px;
+        background-color:white;
+        margin-top:300px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 0px 15px 10px #C5D86D;
+        padding-top:40px;
+      }
+
+      .blueGlowTitle {
+        font-size: 35px;
+        font-family: 'Mukta', sans-serif;
+        text-decoration: underline wavy #B9CDDA;
+        text-align: left;
+        padding-left: 100px;
+      }
+      .blueMusicGlow {
+        height:30%;
+        width: 65%;
+        border-radius: 25px;
+        background-color:white;
+        margin-top:300px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 0px 15px 10px #B9CDDA;
+        padding-top:40px;
       }
 
       .glowDes{
@@ -193,22 +285,107 @@
         /*background-color: black;*/
         width:275px;
         height:150px;
-        top: -65%;
         left: 55%;
-        position: relative;
       }
       
       #whatCode {
+        top: -65%;
+        position: relative;
         background-image: url('whatTheHellCode.png');
       }
+
+      #everybodyCode {
+        top: -65%;
+        position: relative;
+        background-image: url('everybodyCode.png');
+      }
+
+      #controlCode {
+        top: -65%;
+        position: relative;
+        background-image: url('controlCode.png');
+      }
+
+      #stellaCode {
+        top: -65%;
+        position: relative;
+        background-image: url('stellaCode.png');
+      }
+
+      #slippingCode {
+        top: -65%;
+        left: 62%;
+        position: relative;
+        background-image: url('slippingCode.png');
+      }
+
+      #listen {
+        z-index: 3;
+        left: 92%;
+        position: fixed;
+        font-family: 'Mukta', sans-serif;
+        color:black;
+        height: 60px;
+        width: 60px;
+        background-color: white;
+        text-align: center;
+        font-size: 18px;
+        overflow: auto;
+        margin-top:10px;
+        transition: ease-in-out .15s;
+      }
+
+      #listen:hover{
+        color:white;
+        background-color: #373E40;
+        transition: ease-in-out .2s;
+      }
+
+      #pause {
+        z-index: 3;
+        left: 93%;
+        position: fixed;
+        font-family: 'Mukta', sans-serif;
+        color:black;
+        height: 30px;
+        width: 30px;
+        border: 3px #373E40;
+        border-radius: 50%;
+        background-color: white;
+        text-align: center;
+        font-size: 18px;
+        overflow: auto;
+        margin-top:90px;
+        transition: ease-in-out .15s;
+        
+      }
+
+      #pause:hover{
+        /*position: fixed;
+        font-family: 'Mukta', sans-serif;*/
+        color:white;
+        background-color: #373E40;
+        transition: ease-in-out .2s;
+      }
+
+
+
+
+
 
     
 
    </style>
 </head>
-<body>
+<body oncontextmenu="return false;">
+
+
 
 	<section id="s1">
+    <div id="pause"><i class="fa fa-pause"></i></div>
+    <a href="#s4jump">
+      <div id="listen">jump to music</div>
+    </a>
     <div id="welcome" class="square">
       <h1>- Music Data Project -</h1>
       <p>This project utilizes my mood associations with songs. If you like to listen to certain songs when you are in certain moods that is exactly what this is!</p>
@@ -237,11 +414,12 @@
   </section>
   <section id="s4">
     <div id="introToMusic" class="square">
-      <p>Click on this box then keep scrolling to listen to a few of my favorite songs from each catagory! 
+      <a id="s4jump"> <p>Click on the music note then keep scrolling to listen to a few of my favorite songs from each catagory! 
       <br>
       <br>
       *there will be a spotify code that you can scan in the spotify app to pull up the specific song!* </p>
-    </div>
+      <i class="fas fa-music" style= "font-size:25px; color:white"></i>
+    </div> </a>
   </section>
   <section id="s5"></section>
   <section id="s6">
@@ -252,11 +430,52 @@
     </div>
   </section>
   <section id="s7"></section>
+  <section id="s8">
+    <div class="musicGlow">
+      <h class="yellowGlowTitle"> Everybody Talks </h>
+      <p class="glowDes">by Neon Trees</p>
+      <div class="sCode" id="everybodyCode"></div>
+    </div>
+  </section>
+  <section id="s9"></section>
+  <section id="s10">
+    <div class="musicGlow">
+      <h class="yellowGlowTitle"> No Control </h>
+      <p class="glowDes">by One Direction</p>
+      <div class="sCode" id="controlCode"></div>
+    </div>
+  </section>
+  <section id="s11"></section>
+  <section id="s12">
+    <div class="greenMusicGlow">
+      <h class="greenGlowTitle"> Stella Brown </h>
+      <p class="glowDes">by Jelani Aryeh</p>
+      <div class="sCode" id="stellaCode"></div>
+    </div>
+  </section>
+  <section id="s13"></section>
+  <section id="s14">
+    <div class="blueMusicGlow">
+      <h class="blueGlowTitle"> Slipping Through My Fingers </h>
+      <p class="glowDes">sung by Meryl Streep</p>
+      <div class="sCode" id="slippingCode"></div>
+    </div>
+  </section>
+  <section id="s15"></section>
+
 
 
 
 
   <audio id="whatTheHell" src="whatTheHell.mp3"></audio>
+
+  <audio id="everybodyTalks" src="everybodyTalks.mp3"></audio>
+
+  <audio id="noControl" src="noControl.mp3"></audio>
+
+  <audio id="stellaBrown" src="stellaBrown.mp3"></audio>
+
+  <audio id="slippingFingers" src="slippingFingers.mp3"></audio>
 
 
 
@@ -265,6 +484,9 @@
   <script type="text/javascript">
 
   var whatTheHell = document.getElementById('whatTheHell');
+  var everybodyTalks = document.getElementById('everybodyTalks');
+  var noControl = document.getElementById('noControl');
+  var stellaBrown = document.getElementById('stellaBrown');
 
   var dotColors = ["#FDD35D", "#C5D86D", "#B9CDDA", "#C6878F"];
 
@@ -275,7 +497,8 @@
 
   introToMusic.addEventListener("click", function () {
     introToMusic.style.backgroundColor = "#585a6e";
-    introToMusic.style.position = "fixed";
+    console.log("change square color");
+    // introToMusic.style.position = "fixed";
   });
 
   var s2 = document.getElementById("s2");
@@ -324,16 +547,85 @@
   
   };
 
+  var pause = document.getElementById("pause");
+
   var s31 = document.getElementById("s31");
   var s32 = document.getElementById("s32");
   var s33 = document.getElementById("s33");
 
   document.addEventListener("scroll", function() {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
+   
     if (window.scrollY >= 3600){
       console.log("What the hell play!");
       whatTheHell.play();
+
+      everybodyTalks.pause();
+      noControl.pause();
+      stellaBrown.pause();
     }
+
+    if (window.scrollY >= 4430){
+      console.log("Everybody talks play!");
+      everybodyTalks.play();
+
+      whatTheHell.pause();
+      noControl.pause();
+      stellaBrown.pause();
+    }
+
+    if (window.scrollY >= 5920){
+      console.log("No control play!");
+      noControl.play();
+
+      everybodyTalks.pause();
+      whatTheHell.pause();
+      stellaBrown.pause();
+    }
+
+    if (window.scrollY >= 7005){
+      stellaBrown.pause();
+      everybodyTalks.pause();
+      whatTheHell.pause();
+      noControl.pause();
+    }
+
+
+    if (window.scrollY >= 7010){
+      console.log("Stella brown play!");
+      stellaBrown.play();
+    
+      everybodyTalks.pause();
+      whatTheHell.pause();
+      noControl.pause();
+      slippingFingers.pause();
+    }
+
+    if (window.scrollY >= 8090){
+      console.log("Slipping play!");
+      slippingFingers.play();
+
+      everybodyTalks.pause();
+      whatTheHell.pause();
+      noControl.pause();
+      stellaBrown.pause();
+    }
+
+  });
+
+  var pauseCounter = 0;
+
+  pause.addEventListener("click", function() {
+    // pauseCounter = pauseCounter + 1;
+
+    // if (pauseCounter % 2 == 0 ) {
+    everybodyTalks.pause();
+    whatTheHell.pause();
+    noControl.pause();
+    stellaBrown.pause();
+    slippingFingers.pause();
+
+
   });
 
   // document.addEventListener("scroll", function(moveYellow) {

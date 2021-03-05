@@ -2,6 +2,9 @@
 <html>
 <head>
 	<title>Color Scroll</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
@@ -12,19 +15,112 @@
 		margin: 0px;
 		font-family: 'Itim', cursive;
 	}
+
+	#back h1{
+
+		font-size: 40px;
+		text-align: center;
+	}
+
+	p {
+		font-size: 20px;
+		text-align: center;
+	}
 	#back{
-		height:100000px;
+		height:22500px;
 		width:100%;
 		background-color: rgb(184, 210, 212);
 		transition: ease-in-out .25s;
 	}
+
+	/*drop down menu style start*/
+
+		.navbar {
+  			overflow: hidden;
+ 			background-color: none;
+		}
+
+		.navbar a {
+  			float:left;
+  			font-size: 20px;
+  			color: #ddd;
+  			text-align: center;
+  			padding: 14px 10px;
+  			text-decoration: none;
+		}
+
+		.dropdown {
+  			float:left;
+  			overflow: hidden;
+		}
+
+		.dropdown .dropbtn {
+  			font-size: 25px;  
+  			border: none;
+  			outline: none;
+  			color: black;
+  			/*#98b2e6*/
+  			padding: 14px 16px;
+  			background-color: inherit;
+  			font-family: 'Itim', cursive;
+  			margin: 0px;
+		}
+
+		.navbar a:hover, .dropdown:hover .dropbtn {
+  			border: #ddd;
+		}
+
+		.dropdown-content {
+  			display: none;
+  			position: absolute;
+  			background-color: #ddd;
+  			min-width: 160px;
+  			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  			z-index: 1;
+		}
+
+		.dropdown-content a {
+  			float: none;
+  			color: white;
+ 			padding: 10px 14px;
+  			text-decoration: none;
+  			display: block;
+  			text-align: left;
+		}
+
+		.dropdown-content a:hover {
+  			background-color: lightgrey;
+  			text-decoration:underline;
+		}
+
+		.dropdown:hover .dropdown-content {
+  			display: block;
+		}
+
+	/*dropdown menu style end*/
 </style>
 </head>
-<body>
 
+<body oncontextmenu="return false;">
 
 <div id="back">
-	<h>Color Scroll</h>
+<!-- drop down menu -->
+	<div class="navbar">
+  	<div class="dropdown">
+    	<button class="dropbtn">menu<i class="fa fa-caret-down" style="font-size:25px; color:black"></i>
+   	 	</button>
+    
+    	<div class="dropdown-content">
+      		<a href="home.html">HOME</a>
+      		<a href="codesketches.html">PROJECTS</a>
+      		<a href="about.html">ABOUT ME</a>
+      		<a href="journal.html">JOURNAL</a>
+    	</div>
+  	</div> 
+	</div>
+	<!-- drop down menu -->
+
+	<h1 id="title">Color Scroll</h1>
 	<p>Scroll to see the background color change!</p>
 </div>
 <script type="text/javascript">
@@ -36,27 +132,225 @@ var back = document.getElementById("back");
 
 		if (window.scrollY >= 100) {
 			console.log("change color");
-			back.style.backgroundColor = "#eb6380"
+			back.style.backgroundColor = "#eb6380";
 		}
 
 		if (window.scrollY >= 450) {
 			console.log("change color");
-			back.style.backgroundColor = "#ceedd3"
+			back.style.backgroundColor = "#ceedd3";
 		}
 		if (window.scrollY >= 800) {
 			console.log("change color");
-			back.style.backgroundColor = "#beafc4"
+			back.style.backgroundColor = "#beafc4";
 		}
 
 		if (window.scrollY >= 1060) {
 			console.log("change color");
-			back.style.backgroundColor = "#fadec8"
+			back.style.backgroundColor = "#fadec8";
 		}
 
 		if (window.scrollY >= 1400) {
 			console.log("change color");
-			back.style.backgroundColor = "#556e7d"
+			back.style.backgroundColor = "#556e7d";
 		}
+
+		if (window.scrollY >= 1800) {
+			console.log("change color");
+			back.style.backgroundColor = "#6d2e56";
+		}
+
+		if (window.scrollY >= 2200) {
+			console.log("change color");
+			back.style.backgroundColor = "#dad6d6";
+		}
+		
+		if (window.scrollY >= 2600) {
+			console.log("change color");
+			back.style.backgroundColor = "#444b6e";
+		}
+
+		if (window.scrollY >= 3000) {
+			console.log("change color");
+			back.style.backgroundColor = "#9ab87a";
+		}
+
+		if (window.scrollY >= 3400) {
+			console.log("change color");
+			back.style.backgroundColor = "#f8f991";
+		}
+
+		if (window.scrollY >= 3800) {
+			console.log("change color");
+			back.style.backgroundColor = "#f09d51";
+		}
+
+		if (window.scrollY >= 4200) {
+			console.log("change color");
+			back.style.backgroundColor = "#b68cb8";
+		}
+
+		if (window.scrollY >= 4600) {
+			console.log("change color");
+			back.style.backgroundColor = "#af9164";
+		}
+
+		if (window.scrollY >= 5000) {
+			console.log("change color");
+			back.style.backgroundColor = "#465362";
+		}
+
+		if (window.scrollY >= 5400) {
+			console.log("change color");
+			back.style.backgroundColor = "#eee1b3";
+		}
+
+		if (window.scrollY >= 5800) {
+			console.log("change color");
+			back.style.backgroundColor = "#cod684";
+		}
+
+		if (window.scrollY >= 6200) {
+			console.log("change color");
+			back.style.backgroundColor = "#38182f";
+		}
+
+		if (window.scrollY >= 6600) {
+			console.log("change color");
+			back.style.backgroundColor = "#aec3b0";
+		}
+
+		if (window.scrollY >= 7000) {
+			back.style.backgroundColor = "#9b489b";
+		}
+
+		if (window.scrollY >= 7400) {
+			back.style.backgroundColor = "#45b69c";
+		}
+
+		if (window.scrollY >= 7800) {
+			back.style.backgroundColor = "#bf98a0";
+		}
+
+		if (window.scrollY >= 8200) {
+			back.style.backgroundColor = "#183a37";
+		}
+
+		if (window.scrollY >= 8600) {
+			back.style.backgroundColor = "#e5f4e3";
+		}
+
+		if (window.scrollY >= 9000) {
+			back.style.backgroundColor = "#bc4749";
+		}
+
+		if (window.scrollY >= 9400) {
+			back.style.backgroundColor = "#4d5359";
+		}
+
+		if (window.scrollY >= 9800) {
+			back.style.backgroundColor = "#08605f";
+		}
+
+		if (window.scrollY >= 10200) {
+			back.style.backgroundColor = "#8e936d";
+		}
+
+		if (window.scrollY >= 10600) {
+			back.style.backgroundColor = "#0805f";
+		}
+
+		if (window.scrollY >= 11000) {
+			back.style.backgroundColor = "#6b9ac4";
+		}
+		
+		if (window.scrollY >= 11400) {
+			back.style.backgroundColor = "#ebc3db";
+		}
+		if (window.scrollY >= 11800) {
+			back.style.backgroundColor = "#474044";
+		}	
+
+		if (window.scrollY >= 12200) {
+			back.style.backgroundColor = "#78bc61";
+		}
+
+		if (window.scrollY >= 12600) {
+			back.style.backgroundColor = "#da344d";
+		}
+
+		if (window.scrollY >= 13000) {
+			back.style.backgroundColor = "#ffa630";
+		}
+
+		if (window.scrollY >= 13400) {
+			back.style.backgroundColor = "#6e8894";
+		}	
+
+		if (window.scrollY >= 13800) {
+			back.style.backgroundColor = "#574d68";
+		}	
+
+		if (window.scrollY >= 14200) {
+			back.style.backgroundColor = "#e5f4e3";
+		}	
+
+		if (window.scrollY >= 14600) {
+			back.style.backgroundColor = "#c8553d";
+		}	
+
+		if (window.scrollY >= 15000) {
+			back.style.backgroundColor = "#ffb2e6";
+		}		
+
+		if (window.scrollY >= 15400) {
+			back.style.backgroundColor = "#6610f2";
+		}
+
+		if (window.scrollY >= 15800) {
+			back.style.backgroundColor = "#861657";
+		}	
+
+		if (window.scrollY >= 16200) {
+			back.style.backgroundColor = "#488286";
+		}
+
+		if (window.scrollY >= 16600) {
+			back.style.backgroundColor = "#c97c5d";
+		}	
+
+		if (window.scrollY >= 17000) {
+			back.style.backgroundColor = "#fff07c";
+		}
+
+		if (window.scrollY >= 17400) {
+			back.style.backgroundColor = "#d8e2dx";
+		}
+
+		if (window.scrollY >= 17800) {
+			back.style.backgroundColor = "#3d0c11";
+		}
+
+		if (window.scrollY >= 18200) {
+			back.style.backgroundColor = "#60993e";
+		}	
+
+		if (window.scrollY >= 18600) {
+			back.style.backgroundColor = "#861657";
+		}	
+
+		if (window.scrollY >= 19000) {
+			back.style.backgroundColor = "#ee6352";
+		}
+
+		if (window.scrollY >= 19400) {
+			back.style.backgroundColor = "#065143";
+		}
+
+		if (window.scrollY >= 19800) {
+			back.style.backgroundColor = "#f4f1de";
+		}
+			
+
 		
 	});
 
