@@ -221,9 +221,13 @@
         margin-top:300px;
         margin-left: auto;
         margin-right: auto;
-        box-shadow: 0px 0px 15px 10px #FDD35D;
+        /*box-shadow: 0px 0px 15px 10px #FDD35D;*/
         padding-top:40px;
-        /*text-align: center;*/
+        animation-name: yellowGlow;
+        animation-duration:.4s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite; 
+        animation-direction: alternate;
       }
 
       .yellowGlowTitle {
@@ -232,6 +236,17 @@
         text-decoration: underline wavy #FDD35D;
         text-align: left;
         padding-left: 100px;
+        
+      }
+
+      @keyframes yellowGlow{
+        from{
+          box-shadow: 0px 0px 15px 10px #FDD35D;
+        }
+
+        to{
+          box-shadow: 0px 0px 50px 40px #FDD35D;
+        }
       }
 
       .greenGlowTitle {
@@ -249,8 +264,23 @@
         margin-top:300px;
         margin-left: auto;
         margin-right: auto;
-        box-shadow: 0px 0px 15px 10px #C5D86D;
+        /*box-shadow: 0px 0px 15px 10px #C5D86D;*/
         padding-top:40px;
+        animation-name: greenGlow;
+        animation-duration:1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite; 
+        animation-direction: alternate;
+      }
+
+      @keyframes greenGlow{
+        from{
+          box-shadow: 0px 0px 15px 10px #C5D86D;
+        }
+
+        to{
+          box-shadow: 0px 0px 45px 30px #C5D86D;
+        }
       }
 
       .blueGlowTitle {
@@ -268,8 +298,23 @@
         margin-top:300px;
         margin-left: auto;
         margin-right: auto;
-        box-shadow: 0px 0px 15px 10px #B9CDDA;
+        /*box-shadow: 0px 0px 15px 10px #B9CDDA;*/
         padding-top:40px;
+        animation-name: blueGlow;
+        animation-duration:1.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite; 
+        animation-direction: alternate;
+      }
+
+      @keyframes blueGlow{
+        from{
+          box-shadow: 0px 0px 15px 10px #B9CDDA;
+        }
+
+        to{
+          box-shadow: 0px 0px 35px 20px #B9CDDA;
+        }
       }
 
       .glowDes{
