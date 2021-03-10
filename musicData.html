@@ -15,7 +15,10 @@
     <link rel="icon" type="image/png" href="favicon.png"/>
 
    <style type="text/css">
-   		
+   		/*body {
+        margin: 0px;
+      }*/
+
       section{
    			width:100%;
    			height:100%;
@@ -157,6 +160,7 @@
         border: 2px black solid;
         height: 50%;
         display: inline-block;
+        /*position: absolute;*/
       }
 
       .s3Title {
@@ -548,6 +552,7 @@
   });
 
   var s2 = document.getElementById("s2");
+    
     function makeDots (id){
       var number = Math.round(Math.random()*3);
 
@@ -560,12 +565,23 @@
       dot.style.left = x + "px";
       dot.style.top = y + 100 + "px";
       dot.style.backgroundColor = dotColors[number];
-      // console.log(dotColors[number]);
-      // console.log(x,y);
 
-      if (dot.style.backgroundColor == "#FDD35D") {
-        yellowArray.push(this);
-      }
+      // if (dot.style.backgroundColor = "rbg(253, 211, 93)") {
+      //   document.addEventListener('click', function() {
+      //     s31.appendChild(dot);
+      //     clearInerval(position);
+      //     dot.style.transition = "2s";
+      //     dot.style.position = "relative";
+      //     dot.style.top = "0%";
+      //     dot.style.left = "0%";
+      //     dot.style.display = "inline-block";
+      //   })
+
+      //   yellowArray.push(self.dot)
+      // }
+      // if (dot.style.backgroundColor == "#FDD35D") {
+      //   yellowArray.push(this);
+      // }
 
       // if (dot.style.backgroundColor == "#C5D86D") {
       //   greenArray.push(dot);
@@ -578,6 +594,17 @@
       // if (dot.style.backgroundColor == "#C6878F") {
       //   pinkArray.push(dot);
       // }
+      if (dot.style.backgroundColor == "rgb(253, 211, 93)"){
+        document.addEventListener('click', function(){
+        s31.appendChild(dot);
+        dot.style.transition = "2s";
+        dot.style.position = "absolute";
+        dot.style.top = "0%";
+        dot.style.left = "0%";
+        dot.style.display = "inline-block";
+        })
+      }
+      
 
 
       function changePosition() {
