@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/a8bc235660.js" crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		
+		body {
+			margin: 0px;
+			font-family: 'Baloo Tamma 2', cursive;
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+		}
+
+		/*.disable_select {
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+		}*/
+
+		.box {
+			width:100%;
+			height:800px;
+			background-color:white;
+			z-index:0;
+
+
+		}
+
+		#player1 {
+			width:49.7%;
+			height:100%;
+			background-color:lightgrey;
+			display:inline-block;
+			color: white;
+			font-size: 300px;
+			text-align:center;
+			position:relative;
+			z-index:1;
+		}
+
+		#player2 {
+			width:49.7%;
+			height:100%;
+			background-color:grey;
+			display:inline-block;
+			color: white;
+			font-size: 300px;
+			text-align:center;
+			position:relative;
+			z-index:1;
+		}
+		.player p {
+			margin: 0;
+ 		 	position: absolute;
+  			top: 50%;
+  			left: 50%;
+  			transform: translate(-50%, -50%);
+		}
+
+		.name {
+			font-family: 'Rubik', sans-serif;
+			border: 5px solid white;
+			width: 75%;
+			font-size: 50px;
+			margin:auto;
+			margin-top: 10%;
+			z-index: 1;
+		}
+
+		#menu {
+			position:absolute;
+			z-index: 5;
+			color: darkgrey;
+			left:1%;
+			top:1%;
+		}
+
+		.menuBody {
+			visibility: hidden;
+			width: 80%;
+			height: 80%;
+			background-color: white;
+			border: 4px outset #749096;
+			position: absolute;
+			z-index: 10;
+			left: 10%;
+			top: 10%;
+		}
+
+		.menuContent {
+			visibility: hidden;
+		}
+
+		.menuBody.active {
+			visibility: visible;
+		}
+
+		.menuContent.active {
+			visibility: visible;
+		}
+
+		button {
+			border: 0px;
+			background-color: transparent;
+		}
+
+		#start {
+			height: 40px;
+			width: 75px;
+			z-index: 9;
+			font-size: 25px;
+			font-family: 'Rubik', sans-serif;
+			top: 1%;
+			right: 10px;
+			position: absolute;
+			/*border: 2px solid white;*/
+
+		}
+
+		#timeCountdown {
+			font-family: 'Baloo Tamma 2', cursive;
+			z-index: 9;
+			font-size: 100px;
+			bottom: 36%;
+			position: relative;
+			color: white;
+			/*left: 40.3%;*/
+			text-align: center;
+		}
+
+		#newPlayer1, #newPlayer2 {
+			font-size:30px;
+			display:inline-block;
+		}
+
+		#newMinutes, #newSeconds{
+			font-size: 15px;
+			display: inline-block;
+			width: 20%;
+		}
+
+		.playerLabels {
+			font-size: 30px;
+		}
+
+		#minutesLabel, #secondsLabel {
+			font-size: 20px;
+		}
+
+		table {
+			width: 100%;
+			height: 60%;
+			/*padding: 10px;*/
+			position: relative;
+		}
+
+		td {
+			width: 30%;
+			border: 10px solid white;
+			/*padding: 30px;*/
+			font-size: 25px;
+		}
+
+		.colorChoice {
+			height: 50px;
+			width: 100px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			display:inline-block;
+			padding: 5px;
+		}
+
+		#blueGreen {
+			background-image: url(blueGreen.png);
+		}
+
+		#roseSalmon {
+			background-image: url(roseSalmon.png);
+		}
+
+		#purpleBeige {
+			background-image: url(purpleBeige.png);
+		}
+
+		#aquaBlue {
+			background-image: url(aquaBlue.png);
+		}
+
+		#yellowBlue {
+			background-image: url(yellowBlue.png);
+		}
+
+		#whiteBlack {
+			background-image: url(whiteBlack.png);
+			/*background-size: contain;*/
+			/*width: 48px;
+			height: 98px;*/
+			border: 1px solid black;
+		}
+
+
+
+	</style>
+</head>
+<body >
+
+<div class="box">
+	<button id="menu"><i class="fas fa-bars" style="font-size:30px; color:black; z-index:3;"></i></button>
+
+	<button id="start">start!</button>
+	
+
+	<div class="player" id="player1">
+		<div class="name" id="name1">Player 1</div>
+		<p id="oneScore">0</p>
+	</div>
+	<div class="player" id="player2">
+		<div class="name" id="name2">Player 2</div>
+		<p id="twoScore">0</p>
+	</div>
+
+	<div id="timeCountdown">10:00</div>
+	
+</div>
+
+
+
+
+<div class ="menuBody">
+	<div class = "menuContent">
+		<button id="close"><i class="far fa-times-circle" style="font-size:20px;"></i></button>
+
+		<br>
+
+		<center>
+			<label for="newPlayer1" class="playerLabels">Player 1:  </label>
+			<input type="text" id="newPlayer1" name="newPlayer1">
+			<button id="submitName1"><i class="fas fa-check"  style="font-size:20px;"></i></button>
+		</center>
+
+
+		<br>
+
+		<center>
+		<label for="newPlayer2" class="playerLabels">Player 2:  </label>
+		<input type="text" id="newPlayer2" name="newPlayer2">
+		<button id="submitName2"><i class="fas fa-check" style="font-size:20px;"></i></button>
+		</center>
+
+		<br>
+
+		<table>
+			<tr>
+				<td id="scoreColumn">
+					Play up to:
+				</td>
+				<td id="timerColumn">
+					Timer:
+					<br>
+
+					<label for="newMinutes" id="minutesLabel">Minutes: </label>
+					<input type="number" id="newMinutes" name="newMinutes">
+
+					<br>
+
+					<label for="newSeconds" id="minutesSeconds" style="font-size:20px;">Seconds: </label>
+					<input type="number" id="newSeconds" name="newSeconds">
+
+					<br>
+
+					<center>
+					<button id="submitMinutes"><i class="fas fa-check"  style="font-size:18px;"></i></button>
+					</center>
+				</td>
+
+				<td id="colorThemeColumn">
+					Color Theme:
+
+					<br>
+
+					<div id="blueGreen" class="colorChoice"></div>
+
+					<div id="roseSalmon" class="colorChoice"></div>
+
+					<div id="purpleBeige" class="colorChoice"></div>
+
+					<div id="aquaBlue" class="colorChoice"></div>
+
+					<div id="yellowBlue" class="colorChoice"></div>
+
+					<!-- <div id="whiteBlack" class="colorChoice"></div> -->
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+
+<script src="./js/jquery.js"></script>
+<script type="text/javascript">
+
+	var player1score = 0;
+	var player2score = 0;
+	var seconds = 00;
+	var minutes = 10;
+	var count;
+	var maybeStart;
+
+
+
+	$("#player1").click(function() {
+		console.log("player 1 +1");
+		player1score += 1;
+		$("#oneScore").empty();
+		$("#oneScore").append(player1score);
+	})
+
+	$("#player2").click(function() {
+		console.log("player 2 +1");
+		player2score += 1;
+		$("#twoScore").empty();
+		$("#twoScore").append(player2score);
+	})
+
+	$("#menu").click(function() {
+		$(".menuBody, .menuContent").addClass("active");
+	})
+
+	$("#close").click(function() {
+		$(".menuBody, .menuContent").removeClass("active");
+	})
+
+
+	$("#submitName1").click(function() {
+		$("#name1").text($("#newPlayer1").val());
+	})
+
+	$("#submitName2").click(function() {
+		$("#name2").text($("#newPlayer2").val());
+	})
+
+	$("#submitMinutes").click(function() {
+
+	})
+
+	$("#blueGreen").click(function() {
+		$("#player1").css({"background-color": "#9bc1bc", "color": "white"});
+		$("#player2").css("background-color", "#8cb369");
+		$("#name1").css("border", "5px solid white");
+	})
+
+	$("#roseSalmon").click(function() {
+		$("#player1").css({"background-color": "#aa767c", "color": "white"});
+		$("#player2").css("background-color", "#ffa686");
+		$("#name1").css("border", "5px solid white");
+	})
+
+	$("#purpleBeige").click(function() {
+		$("#player1").css({"background-color": "#4b3b47", "color": "white"});
+		$("#player2").css("background-color", "#a47963");
+		$("#name1").css("border", "5px solid white");
+	})
+
+	$("#aquaBlue").click(function() {
+		$("#player1").css({"background-color": "#bbdbd1", "color": "white"});
+		$("#player2").css("background-color", "#b6b8d6");
+		$("#name1").css("border", "5px solid white");
+	})
+
+	$("#yellowBlue").click(function() {
+		$("#player1").css({"background-color": "#ffd685", "color": "white"});
+		$("#player2").css("background-color", "#9eb5d1");
+		$("#name1").css("border", "5px solid white");
+	})
+
+	$("#whiteBlack").click(function() {
+		$("#player1").css({"background-color": "#fdfdfd", "color": "black"});
+		$("#name1").css("border", "5px solid black");
+		$("#player2").css("background-color", "#070707");
+		$("#start").css("color", "white");
+	})
+
+	function countDown() {
+			seconds = seconds - 1;
+			$("#inputMinutes").val(minutes);
+
+			if (seconds < 0 && minutes == 0) {
+				// $("#start").on()
+				clearInterval(count);
+				console.log("hello");
+				$(".player").css("border", "5px ")
+			}
+
+			else if (seconds < 0){
+				seconds = 60
+
+				minutes -= 1
+			}
+
+			// else if (seconds == 0 && minutes == 0){
+			// 	// .css("animaition", "")
+			// 	$("#start").on("click")
+			// 	console.log("hello")
+			// }
+
+
+
+			else if (seconds<10 && minutes<10){
+				$("#timeCountdown").text("0" + minutes + ":0" + seconds); 
+			}
+
+			else if (seconds<10){
+				$("#timeCountdown").text(minutes + ":0" + seconds); 
+			}
+			
+			else if (minutes<10){
+				$("#timeCountdown").text("0" + minutes + ":" + seconds); 
+			}
+
+			
+			else if (seconds>10 && minutes>10){
+
+				$("#timeCountdown").text(minutes + ":" + seconds); 
+			}
+		}
+
+	$("#submitMinutes").click(function() {
+		minutes = parseInt($("#newMinutes").val());
+		seconds = parseInt($("#newSeconds").val());
+
+		minutes = minutes || 0;
+		seconds = seconds || 0;
+
+
+		if (seconds>10 && minutes>10){
+
+			$("#timeCountdown").text(minutes + ":" + seconds); 
+		}
+
+		else if (seconds<10 && minutes<10){
+			$("#timeCountdown").text("0" + minutes + ":0" + seconds); 
+		}
+
+		else if (seconds<10){
+			$("#timeCountdown").text(minutes + ":0" + seconds); 
+		}
+			
+		else if (minutes<10){
+			$("#timeCountdown").text("0" + minutes + ":" + seconds); 
+		}
+
+ 
+	})
+
+
+
+	$("#start").click(function() {
+
+		console.log("hi");
+
+		count = setInterval(countDown, 1000);
+		console.log(minutes, seconds);
+
+		$("#start").off("click")
+	})
+
+	$("#newMinutes").keyup(function() {
+		this.value = this.value.replace(/[^0-9\.]/g,'');
+	})
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

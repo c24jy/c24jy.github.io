@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<input id="inputMinutes"></input>
+<input id="inputSeconds"></input>
+
+<button id="submit">start</button>
+
+
+<script src="./js/jquery.js"></script>
+<script type="text/javascript">
+
+	var seconds;
+	var minutes;
+	var count;
+
+	function countDown() {
+			seconds = seconds - 1;
+			$("#inputMinutes").val(minutes);
+			$("#inputSeconds").val(seconds);
+
+			if (seconds <= 0 && minutes <= 0) {
+				clearInterval(count);
+			}
+
+			else if (seconds <= 0){
+				seconds = 59
+
+				minutes -= 1
+			}
+
+	
+		}
+
+	$("#submit").click(function() {
+		minutes = parseInt($("#inputMinutes").val());
+		seconds = parseInt($("#inputSeconds").val());
+
+		console.log(minutes);
+		console.log(seconds);
+
+		count = setInterval(countDown, 1000);
+
+
+	})
+
+
+
+</script>
+
+</body>
+</html>
